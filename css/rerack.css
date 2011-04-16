@@ -1,0 +1,13 @@
+@import url('reset.css');
+@import url('colorbox.css');
+body {
+  background-color: #44392e; }
+
+body, a, p, div, li, h1, h2 {
+  font-family: "Kreon", Verdana, sans-serif;
+  font-weight: bold;
+  color: #555555; }
+
+a {
+  text-decoration: none;
+  color: #cb610b; }
