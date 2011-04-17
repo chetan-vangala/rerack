@@ -3,8 +3,9 @@
   <body>
     <?php 
       if(isset($_GET['house'])){
+        require 'shared/_header.php'; 
         require_once 'shared/_dashboard.php';
-      } else {                
+      } else {
         $house = new House();
         //Has the form been submitted?
         if(count($_POST) > 0){
@@ -21,10 +22,9 @@
           } else {
             $errors[] = "Unable to create team.";
           }
-        }
-          //Display any error messages we've encountered.
-        if(!empty($errors)){
-          print_errors($errors);
+          if(!empty($errors)){
+            print_errors($errors);
+          } 
         } else {
           require_once 'shared/_code.php';
         }

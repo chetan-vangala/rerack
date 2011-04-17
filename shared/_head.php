@@ -12,4 +12,15 @@
     <!--script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/jquery.colorbox-min.js" type="text/javascript"></script-->
     <script src="js/jquery.mobile.min.js" type="text/javascript"></script>
-    <?php if(isset($_GET['house'])) $the_id = $_GET['house']; ?>
+    <?php
+      if(isset($_GET['house'])){
+        $the_code = $_GET['house'];
+        $h = new House();
+        $house = $h->find(array('code'=> $the_code));
+        if(!empty($house)){
+          $the_id = $house[0]->id;
+        } else {
+          $the_id = 0;
+        }
+      }
+    ?>

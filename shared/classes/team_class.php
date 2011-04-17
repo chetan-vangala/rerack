@@ -12,6 +12,10 @@ class Team extends Model{
       $this->update();
     }
   }
+  
+  function win() {
+    
+  }
 
 }
 

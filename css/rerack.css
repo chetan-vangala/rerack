@@ -5,7 +5,7 @@ body {
   background: #44392e url(../images/wood-bg.jpg) no-repeat;
   width: 580px;
   height: 900px;
-  padding: 30px; }
+  padding: 10px 20px; }
 
 body, a, p, div, li, h1, h2, td {
   font-family: "Kreon", Verdana, sans-serif;
@@ -22,3 +22,10 @@ a {
 
 td {
   padding: 10px; }
+
+#top-nav {
+  padding: 10px 0; }
+  #top-nav li {
+    display: inline;
+    padding: 0 35px;
+    font-weight: bold; }
