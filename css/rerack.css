@@ -1,13 +1,7 @@
 @import url('reset.css');
 @import url('colorbox.css');
 @import url('jquery.mobile.css');
-body {
-  background: #44392e url(../images/wood-bg.jpg) no-repeat;
-  width: 580px;
-  height: 900px;
-  padding: 10px 20px; }
-
-body, a, p, div, li, h1, h2, td {
+body, a, p, div, li, h1, h2, td, input {
   font-family: "Kreon", Verdana, sans-serif;
   font-weight: regular;
   font-size: 28px;
@@ -22,6 +16,29 @@ a {
 
 td {
   padding: 10px; }
+
+body {
+  background: #44392e url(/images/wood-bg.jpg) no-repeat;
+  width: 580px;
+  height: 900px;
+  padding: 10px 20px; }
+
+body#login {
+  background: #44392e url(/images/login.jpg) no-repeat; }
+  body#login #code-input {
+    position: absolute;
+    top: 545px;
+    left: 130px; }
+    body#login #code-input input {
+      padding: 15px 0 0 20px;
+      width: 450px;
+      height: 64px;
+      background-color: transparent;
+      border: none;
+      font-size: 50px;
+      font-weight: bold;
+      color: #4d3e31;
+      letter-spacing: 54px; }
 
 #top-nav {
   padding: 10px 0; }
