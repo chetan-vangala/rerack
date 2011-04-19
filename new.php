@@ -40,7 +40,6 @@ if(count($_POST) > 0){
     <label class="description" for="name">Number of Tables:</label><br />
     <input class="wide" type="text" name="house[tables]" id="tables" value="<?php echo double_ene_val($_POST,'house','tables'); ?>" />
     <br />
-    <div style="float:left; padding:10px 61px 0 10px"><a class="a-flip" href="admin.php">Cancel</a></div>
     <input class="submit_btn" type="submit" name="submit" value="Finish" />
   </form>
 </div>  

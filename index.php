@@ -3,32 +3,32 @@
   <body>
     <?php 
       if(isset($_GET['house'])){
-        require 'shared/_header.php'; 
-        require_once 'shared/_dashboard.php';
+        redirect_to('dashboard.php?house=' . $_GET['house']);
       } else {
-        $house = new House();
-        //Has the form been submitted?
         if(count($_POST) > 0){
-          $data = $_POST['house']['code'];        
+          $data = $_POST['code'];        
           $errors = array();
-          //Verify the fields are filled out
-          if(!ene($data,array('code'))){
+          if(!empty($data)){
             $errors[] = 'All fields must be complete.';
           }
-          $h = $house->find("code=$data");
+          redirect_to('dashboard.php?house=' . $data);
+          /*$house = new House();
+          $h = $house->find('code=' . $data);
           if(!empty($h)){
-            redirect_to('index.php?house=' . $data);
+            
             return;
           } else {
-            $errors[] = "Unable to create team.";
-          }
-          if(!empty($errors)){
-            print_errors($errors);
-          } 
-        } else {
-          require_once 'shared/_code.php';
+            $errors[] = "Unable to find house.";
+          }*/
+          print_errors($errors); 
         }
       }
     ?>
+    <br />
+    <form id="create-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+      <label class="description" for="name">House Code:</label>
+      <input class="wide" type="text" name="code" id="code" value="<?php echo ene($_POST,'code'); ?>" />
+      <input class="submit_btn" type="submit" name="submit" value="Play" />
+    </form>
   </body>
 </html>

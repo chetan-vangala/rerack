@@ -1,3 +1,5 @@
+<?php require('shared/_head.php'); ?>
+<?php require 'shared/_header.php'; ?>
 <table>
   <tbody>
     <?php
