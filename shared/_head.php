@@ -11,7 +11,7 @@
     <link rel="image_src" href="/images/thumb.png" />
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <!--script src="/js/jquery.mobile.min.js" type="text/javascript"></script-->
-    <script src="js/rerack.js" type="text/javascript"></script>
+    <script src="/js/rerack.js" type="text/javascript"></script>
     <?php
       if(isset($_GET['house'])){
         $the_code = $_GET['house'];

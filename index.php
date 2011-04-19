@@ -6,13 +6,15 @@
         $data = $_POST['code'];
         if(empty($_POST['code'])){
           print_errors('All fields must be complete.');
-        } else {      
+        } else {
+          $data = implode($data);     
         redirect_to('dashboard.php?house=' . $data);
         }
       }
     ?>
     <br />
     <form id="code-input" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+<<<<<<< HEAD
       <input type="text" name="code" id="code" size="5" value="<?php echo ene($_POST,'code'); ?>" />
       <input id="code-submit" type="hidden" name="submit" value="go" />
     </form>
