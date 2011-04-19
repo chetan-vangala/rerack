@@ -1,5 +1,4 @@
-<?php require('shared/_head.php'); ?>
-<?php require 'shared/_header.php'; ?>
+<?php require('shared/_head.php'); require 'shared/_header.php'; ?>
 <div id="content-area">
   <div id="table-container">
     <?php
