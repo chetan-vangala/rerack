@@ -1,4 +1,14 @@
 <?php require('shared/_head.php'); require 'shared/_header.php'; ?>
+<div id="page-top">
+  <h1>mugshot</h1>
+  <div id="record">
+    <?php 
+      $top = $t->find(array('id=' . $house->top_team_id));
+      echo '<div class="games">' . $top[0]->wins . '</div><div class="meta"><p>current record</p><h2>';
+      echo $top[0]->name . '</h2></div>';
+    ?>
+  </div>
+</div>
 <div id="content-area">
   <div id="table-container">
     <?php
@@ -16,26 +26,29 @@
     }
     ?>
   </div>
-  
-
-  <br />
-  <form id="create-form" action="signup.php?house=<?php echo $the_code ?>" method="POST">
-    <label class="description" for="name">Team Name:</label>
-    <input class="wide" type="text" name="team[name]" id="name" value="<?php echo double_ene_val($_POST,'team','name'); ?>" />
-    <input class="submit_btn" type="submit" name="submit" value="Add" />
-  </form>
-  <br />
-  <table>
-    <tbody>
-      <?php          
-        $teams = $t->find(array('queued=1', "house_id=$the_id"));
-      if(!empty($teams)){
-        foreach($teams as $team){
-          echo '<tr><td>';
-          echo $team->name . '</td><td>' . $team->player . '</td><td>' . $team->teammate . '</td><td>' . $team->wins . '</td></tr>';
-        }
+  <div id="house-deck">
+    <div id="stats">
+      <h4>to play</h4>
+      <p class="toplay">23</p>
+      <h4>played</h4>
+      <p class="played">11</p>
+    </div>
+    <h4>on deck</h4>
+    <ul>
+    <?php
+    $teams = $t->find(array('queued=1', "house_id=$the_id"));
+    if(!empty($teams)){
+      foreach($teams as $team){
+        echo '<li>' . $team->name . '</li>';
       }
-      ?>
-      </tbody>  
-  </table>
+    }
+    ?>
+    </ul>
+  </div>
+  <div id="start-team">
+    <form action="signup.php?house=<?php echo $the_code ?>" method="POST">
+      <input class="clean" type="text" name="team[name]" id="name" onblur="if (this.value == ''){this.value = 'type a team name to sign up';}" onfocus="if (this.value == 'type a team name to sign up') {this.value = '';}" value="type a team name to sign up" />
+      <input class="inline-submit" type="submit" name="submit" value="Add" />
+    </form>
+  </div>
 </div>

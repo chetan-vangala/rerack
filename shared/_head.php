@@ -5,7 +5,7 @@
   <head>
     <title>rerackapp.com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href='http://fonts.googleapis.com/css?family=Kreon:regular,bold' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Kreon:light,regular,bold' rel='stylesheet' type='text/css'>
     <link href="/css/rerack.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="/images/favicon.png" />
     <link rel="image_src" href="/images/thumb.png" />
