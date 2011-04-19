@@ -14,7 +14,6 @@
     ?>
     <br />
     <form id="code-input" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-<<<<<<< HEAD
       <input type="text" name="code" id="code" size="5" value="<?php echo ene($_POST,'code'); ?>" />
       <input id="code-submit" type="hidden" name="submit" value="go" />
     </form>
