@@ -2,7 +2,7 @@
 @import url('colorbox.css')
 @import url('jquery.mobile.css')
 
-body, a, p, div, li, h1, h2, td, input
+body, a, p, div, li, h1, h2, h3, td, input, span
   font-family: 'Kreon', Verdana, sans-serif
   font-weight: regular
   font-size: 28px
@@ -10,18 +10,35 @@ body, a, p, div, li, h1, h2, td, input
 a
   text-decoration: none
   color: #cb610b
+  
+h1
+  font-size: 42px
+  color: #cd8746
+  font-weight: bold
+  
+h2
+  font-size: 40px
+  color: #dd310a
+  
+h3
+  font-size: 36px
+  letter-spacing: -.01em
+  color: #dd310a
+  font-weight: bold
 
 .description
   font-size: 12px
+
+#content-area
+  padding: 10px 0
 
 td
   padding: 10px
 
 body
   background: #44392e url(/images/wood-bg.jpg) no-repeat
-  width: 580px
-  height: 900px
-  padding: 10px 20px
+  max-width: 580px
+  max-height: 900px
 
 body#login
   background: #44392e url(/images/login.jpg) no-repeat
@@ -41,8 +58,73 @@ body#login
       letter-spacing: 53px      
   
 #top-nav
-  padding: 10px 0
-  li
-    display: inline
-    padding: 0 35px
-    font-weight: bold
+  position: relative
+  width: 640px
+  height: 158px
+  background: transparent url(/images/header-bg.jpg) no-repeat
+  #title-bar
+    position: absolute
+    height: 22px
+    left: 0
+    width: 620px
+    padding: 3px 10px
+    color: #644e4b
+    font-size: 22px
+    text-transform: uppercase
+  ul
+    position: absolute
+    top: 80px
+    left: 260px
+    li
+      display: inline
+      padding: 0 20px
+      font-weight: bold
+#page-top
+  padding: 5px 10px 20px 10px
+  height: 60px
+  width: 620px
+  h1
+    float: left
+    padding-top: 15px
+  #record
+    float: right
+    .games
+      float: right
+      height: 40px
+      font-size: 58px
+      font-weight: bold
+    .meta
+      padding: 15px 5px 0 0 
+      float: right
+      text-align: right
+      p
+        font-size: 15px
+        line-height: 1px
+
+#table-container
+  .table
+    position: relative
+    width: 640px
+    height: 134px
+    background: transparent url(/images/table-bg.jpg) no-repeat
+    margin-bottom: 18px
+    .number
+      padding: 10px
+      font-size: 20px
+      font-weight: bold
+      color: #4f4b47
+    .player, .opponent
+      position: absolute
+      top: 50px
+      left: 30px
+      h3 .score
+        padding-left: 2px
+        font-size: 18px
+        color: #998675
+    .opponent
+      text-align: right
+      right: 30px
+    
+      
+      
+

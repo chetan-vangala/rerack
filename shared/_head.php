@@ -13,9 +13,9 @@
     <!--script src="/js/jquery.mobile.min.js" type="text/javascript"></script-->
     <script src="/js/rerack.js" type="text/javascript"></script>
     <?php
+      $h = new House();
       if(isset($_GET['house'])){
         $the_code = $_GET['house'];
-        $h = new House();
         $house = $h->find(array('code'=> $the_code));
         if(!empty($house)){
           $the_id = $house[0]->id;
