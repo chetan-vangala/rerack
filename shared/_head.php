@@ -9,9 +9,9 @@
     <link href="/css/rerack.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="/images/favicon.png" />
     <link rel="image_src" href="/images/thumb.png" />
-    <!--script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery.colorbox-min.js" type="text/javascript"></script-->
-    <script src="/js/jquery.mobile.min.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <!--script src="/js/jquery.mobile.min.js" type="text/javascript"></script-->
+    <script src="/js/rerack.js" type="text/javascript"></script>
     <?php
       if(isset($_GET['house'])){
         $the_code = $_GET['house'];
