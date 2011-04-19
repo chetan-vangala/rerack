@@ -3,8 +3,8 @@
     <?php echo $house->name ?>
   </div>
   <ul>
-    <li><a href="dashboard.php?house=<?php echo $the_code ?>">mugshot</a></li>
-    <li><a href="list.php?house=<?php echo $the_code ?>">list</a></li>
-    <li><a href="index.php">house</a></li>
+    <li id="mug-li" class="mug"><a href="dashboard.php?house=<?php echo $the_code ?>"></a></li>
+    <li id="list-li" class="list"><a href="list.php?house=<?php echo $the_code ?>"></a></li>
+    <li id="location-li" class="location"><a href="index.php"></a></li>
   </ul>
 </div>

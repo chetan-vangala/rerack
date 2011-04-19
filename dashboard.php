@@ -1,4 +1,9 @@
 <?php require('shared/_head.php'); require 'shared/_header.php'; ?>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#mug-li').addClass('active');
+});
+</script>
 <div id="page-top">
   <h1>mugshot</h1>
   <div id="record">
