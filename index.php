@@ -6,8 +6,7 @@
         $data = $_POST['code'];
         if(empty($_POST['code'])){
           print_errors('All fields must be complete.');
-        } else {
-          $data = implode($data);     
+        } else {  
         redirect_to('dashboard.php?house=' . $data);
         }
       }
