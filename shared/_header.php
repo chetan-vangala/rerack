@@ -12,7 +12,6 @@
   <h1>mugshot</h1>
   <div id="record">
     <?php 
-      $t = new Team();
       $top = $t->find($house->top_team_id);
       echo '<div class="games">' . $top[0]->wins . '</div><div class="meta"><p>current record</p><h2>';
       echo $top[0]->name . '</h2></div>';

@@ -2,8 +2,6 @@
 <div id="content-area">
   <div id="table-container">
     <?php
-    $t = new Team();
-    $tab = new Table();
     $tables = $tab->find(array("house_id=$the_id"));
     if(!empty($tables)){
       $i = 1;
