@@ -44,6 +44,9 @@ input.clean {
 #content-area {
   padding: 10px 0; }
 
+#errors {
+  padding: 20px; }
+
 td {
   padding: 10px; }
 
@@ -57,15 +60,17 @@ body#login {
   body#login #code-input {
     position: absolute;
     top: 545px;
-    left: 128px; }
+    left: 127px; }
     body#login #code-input input {
-      padding: 15px 0 0 19px;
+      font-family: "Courier New", "Courier", monospace;
+      font-weight: bold;
+      padding: 15px 0 0 18px;
       width: 450px;
       height: 64px;
       font-size: 50px;
       font-weight: bold;
       color: #4d3e31;
-      letter-spacing: 53px; }
+      letter-spacing: 50px; }
 
 #top-nav {
   position: relative;

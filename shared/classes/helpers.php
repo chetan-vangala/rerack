@@ -24,11 +24,19 @@ function ene($array, $key){
   return exists_not_empty($array, $key);
 }
 
+function ene_val($array, $key1 = ""){
+  if(array_key_exists($key1, $array)){
+    return $array[$key1];
+  } else {
+    return "";
+  }
+}
+
 //Print error messages
 //Might want to clean this up to be prettier
 function print_errors($errors = array()){
 	if(empty($errors)) return; //nothing to do here
-	echo'<div class="pleft" id="status">';
+	echo'<div id="errors">';
   foreach($errors as $value){
   		echo "<p>" . $value . "</p>";
   }

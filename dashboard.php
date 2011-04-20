@@ -33,10 +33,10 @@ $(document).ready(function(){
   </div>
   <div id="house-deck">
     <div id="stats">
-      <h4>to play</h4>
-      <p class="toplay">23</p>
-      <h4>played</h4>
-      <p class="played">11</p>
+      <?php 
+        echo "<h4>to play</h4><p class='toplay'>$house->left</p>";
+        echo "<h4>played</h4><p class='played'>$house->played</p>";
+      ?>
     </div>
     <h4>on deck</h4>
     <ul>

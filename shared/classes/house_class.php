@@ -14,7 +14,6 @@ class House extends Model{
   
   function getCode(){
     $this->code = md5($this->id * mt_rand(99, 9999));
-     //= substr($c, 0, 5);
     if(!$this->save()){
       getCode();
     }
