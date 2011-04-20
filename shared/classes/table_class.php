@@ -17,7 +17,8 @@ class Table extends Model{
       }
       $team->highscore($house);
       $tmp = $team->find(array("house_id=$house->id", "queued=1"));
-      $team = $tmp[0];
+      $team = !empty($tmp) ? $tmp[0] : -1;
+      
       $house->played += 1;
       $house->save();      
       $t_del[0]->delete();
@@ -31,10 +32,10 @@ class Table extends Model{
     $found = empty($tables) ? 0 : count($tables);
     $e_found = empty($e_tables) ? 0 : count($e_tables);
     
-    if($p < ($numTables * 2)){
+    if($p < ($numTables * 2) && $team != -1){
       $team->queued = 0;
-      if($house->left != 0) $house->left -= 1;
       $team->save();
+      if($house->left != 0) $house->left -= 1;
       $house->save();
       if(($found == 0) || ($found < $numTables && !($p%2) && $e_found == 0)){
         $temp = new Table();
