@@ -14,10 +14,15 @@ $(document).ready(function(){
       foreach($tables as $table){
         $team = $t->find(array('id=' . $table->team_id));
         $opp = $t->find(array('id=' . $table->opponent_id));
-        if(empty($opp)) $opp[0]->name = '';
+        $on = '';
+        $oid = '';
+        if(!empty($opp)) {
+          $on = $opp[0]->name;
+          $oid = $opp[0]->id;
+        }
         echo '<div class="table"><div class="number">' . $i . '</div>';
         echo '<div class="player"><h3 id=team-' . $team[0]->id .'>' . $team[0]->name . '<span class="score">' . $team[0]->wins . '</span></h3></div>';
-        echo '<div class="opponent"><h3 id=team-' . $opp[0]->id .'>' . $opp[0]->name . '</h3></div></div>';
+        echo '<div class="opponent"><h3 id=team-' . $oid .'>' . $on . '</h3></div></div>';
         $i++;
       }
     }
