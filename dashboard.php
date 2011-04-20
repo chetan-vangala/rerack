@@ -24,7 +24,7 @@ $(document).ready(function(){
         }
         echo '<div class="table"><div class="number">' . $i . '</div>';
         echo '<div class="player"><h3 id=team-' . $team[0]->id .'><a href="win.php?id=' . $the_code . '&t=' . encrypt($table->team_id,KEY) . '">' . $team[0]->name . '</a><span class="score">' . $team[0]->wins . '</span></h3></div>';
-        if($o) echo '<div class="opponent"><h3 id=team-' . $oid .'><a href="win.php?id=' . $the_code . '&t=' . encrypt($oid,KEY) . '">' . $on . '</a></h3></div></div>';
+        echo '<div class="opponent"><h3 id=team-' . $oid .'><a href="win.php?id=' . $the_code . '&t=' . encrypt($oid,KEY) . '">' . $on . '</a></h3></div></div>';
         $i++;
       }
     }
