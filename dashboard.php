@@ -1,4 +1,4 @@
-<?php require('shared/_head.php'); require 'shared/_header.php'; ?>
+<?php require('shared/_head.php'); require 'shared/_header.php';?>
 <script type="text/javascript">
 $(document).ready(function(){
   $('#mug-li').addClass('active');

@@ -1,12 +1,14 @@
-<?php require('../shared/_head.php');
+<?php require('shared/_head.php');
 
-  if(ene($_REQUEST, 'id') && is_numeric($_REQUEST['id'])){
-    $id = intval($_REQUEST['id']);
+  $team = $t->find(array("id=$team_code"));
+  if(!empty($team)){
+   $team[0]->win();
+   //redirect_to("dashboard.php?id=$the_code&t=" . encrypt($team_code,KEY));
   } else {
-    redirect_to("index.php?house=$the_id");
+    echo 'bad';    
+    
   }
   
-  $team = new Team($id);
-  $team->wins++;
+  
   
 ?>

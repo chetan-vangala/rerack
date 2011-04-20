@@ -182,7 +182,7 @@ class Model{
   /**
    * Deletes an object.  After the object is deleted,
    * all the properties remain except for the id.
-   * before_delete and after_delete are called if them exist.
+   * before_delete and after_delete are called if they exist.
    * @access public
    * @return bool
    */
@@ -225,9 +225,14 @@ class Model{
    * @access public
    * @return mixed
    */
-  public function find($conditions = array(), $allow_self = false){
-    $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $this->process_conditions($conditions) . ' ORDER BY id';
-    //echo $sql;
+  public function find($conditions = array(), $allow_self = false, $straight = false){
+    $sql = '';
+    if($straight){
+      $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $conditions[0] . ' ORDER BY id';
+    } else {
+      $sql = 'SELECT * FROM ' . $this->table . ' WHERE ' . $this->process_conditions($conditions) . ' ORDER BY id';
+    }
+    //echo "<br />$sql";
     $result = $this->db->query($sql);
     $count = count($result);
     if($count==1 && $allow_self){
