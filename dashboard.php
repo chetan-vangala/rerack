@@ -2,18 +2,9 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $('#mug-li').addClass('active');
+  $('#sec-title').text('mugshot');
 });
 </script>
-<div id="page-top">
-  <h1>mugshot</h1>
-  <div id="record">
-    <?php 
-      $top = $t->find(array('id=' . $house->top_team_id));
-      echo '<div class="games">' . $top[0]->wins . '</div><div class="meta"><p>current record</p><h2>';
-      echo $top[0]->name . '</h2></div>';
-    ?>
-  </div>
-</div>
 <div id="content-area">
   <div id="table-container">
     <?php
