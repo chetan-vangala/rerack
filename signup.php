@@ -1,4 +1,8 @@
-<?php require('shared/_head.php');
+<?php 
+
+require('shared/_head.php'); 
+require('shared/_header.php');
+
 $team = new team();
 //Has the form been submitted?
 if(count($_POST) > 0){
@@ -15,17 +19,14 @@ if(count($_POST) > 0){
     //array_push($data, array('house_id' => ));
     $team->update_attributes($data);
     if($team->create()){
-      redirect_to("dashboard.php?house=" . $the_code);
+      echo 'success';
+      //redirect_to("dashboard.php?house=" . $the_code);
       return;
     } else {
       $errors[] = "Unable to create team.";
     }
   }
-  //Display any error messages we've encountered.
-  if(!empty($errors)){
-    print_errors($errors);
-  }
-  
+  print_errors($errors);
 } else {
   $team->name = "";
 }

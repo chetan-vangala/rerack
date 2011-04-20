@@ -3,21 +3,14 @@
 class House extends Model{ 
 
   function after_create(){
-    for($i = 0; $i < $this->tables; $i++){
-      $p = array("house_id" => $this->id);
-      $t = new Table($p);
-      $t->save();
-    }
-    
-    $this->getCode();
+    $this->genCode();
   }
   
-  function getCode(){
-    $this->code = md5($this->id * mt_rand(99, 9999));
+  function genCode(){
+    $this->code = md5($this->id);
     if(!$this->save()){
-      getCode();
+      genCode();
     }
   }
-
 }
 ?>
