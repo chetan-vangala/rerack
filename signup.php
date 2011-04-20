@@ -19,8 +19,8 @@ if(count($_POST) > 0){
     //array_push($data, array('house_id' => ));
     $team->update_attributes($data);
     if($team->create()){
-      echo 'success';
-      //redirect_to("dashboard.php?house=" . $the_code);
+      //echo 'success';
+      redirect_to("dashboard.php?house=" . $the_code);
       return;
     } else {
       $errors[] = "Unable to create team.";
