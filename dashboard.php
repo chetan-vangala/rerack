@@ -35,8 +35,11 @@ $(document).ready(function(){
     <?php
     $teams = $t->find(array('queued=1', "house_id=$the_id"));
     if(!empty($teams)){
+      $i = 0;
       foreach($teams as $team){
         echo '<li>' . $team->name . '</li>';
+        if($i == 3) continue;
+        $i++;
       }
     }
     ?>
