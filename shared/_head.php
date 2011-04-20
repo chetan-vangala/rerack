@@ -17,12 +17,24 @@
       $h = new House();
       $t = new Team();
       $tab = new Table();
-      if(isset($_GET['house'])){
-        $the_code = $_GET['house'];
+      if(isset($_GET['id'])){
+        $the_code = $_GET['id'];
         $house  = $h->find(array('code'=> $the_code));
         if(!empty($house)){
           $house = $house[0];
           $the_id = $house->id;
+        } else {
+          redirect_to('index.php');
         }
       }
+      if(isset($_GET['t'])){
+        $team_code = decrypt($_GET['t'], KEY);
+        $the_team  = $t->find(array('id'=> $team_code));
+        if(!empty($the_team)){
+          $the_team = $the_team[0];
+        }
+      } else {
+        $team_code = '';
+      }
+    ?>
     

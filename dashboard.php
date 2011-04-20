@@ -16,8 +16,8 @@ $(document).ready(function(){
         $opp = $t->find(array('id=' . $table->opponent_id));
         if(empty($opp)) $opp[0]->name = '';
         echo '<div class="table"><div class="number">' . $i . '</div>';
-        echo '<div class="player"><h3>' . $team[0]->name . '<span class="score">' . $team[0]->wins . '</span></h3></div>';
-        echo '<div class="opponent"><h3>' . $opp[0]->name . '</h3></div></div>';
+        echo '<div class="player"><h3 id=team-' . $team[0]->id .'>' . $team[0]->name . '<span class="score">' . $team[0]->wins . '</span></h3></div>';
+        echo '<div class="opponent"><h3 id=team-' . $opp[0]->id .'>' . $opp[0]->name . '</h3></div></div>';
         $i++;
       }
     }
@@ -42,10 +42,5 @@ $(document).ready(function(){
     ?>
     </ul>
   </div>
-  <div id="start-team">
-    <form action="signup.php?house=<?php echo $the_code ?>" method="POST">
-      <input class="clean" type="text" name="team[name]" id="name" onblur="if (this.value == ''){this.value = 'type a team name to sign up';}" onfocus="if (this.value == 'type a team name to sign up') {this.value = '';}" value="type a team name to sign up" />
-      <input class="inline-submit" type="submit" name="submit" value="Add" />
-    </form>
-  </div>
+  <?php require 'shared/_teambar.php' ?>
 </div>

@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
-//Pretty simple config file
+define('KEY', '8h20or^}pP3I'); //Used to encrypt/decrypt ids
+
 define('DB_USERNAME', 'rerack'); //Username
 define('DB_PASSWORD', 'rerack'); //Password
 define('DB_NAME', 'rerack'); //Database name

@@ -1,10 +1,10 @@
 <div id="top-nav">
   <div id="title-bar">
-    <?php echo $house->name ?>
+    <?php echo "$house->name" ?>
   </div>
   <ul>
-    <li id="mug-li" class="mug"><a href="dashboard.php?house=<?php echo $the_code ?>"></a></li>
-    <li id="list-li" class="list"><a href="list.php?house=<?php echo $the_code ?>"></a></li>
+    <li id="mug-li" class="mug"><a href="dashboard.php?id=<?php echo "$the_code&t=" . encrypt($team_code,KEY) ?>"></a></li>
+    <li id="list-li" class="list"><a href="list.php?id=<?php echo "$the_code&t=" . encrypt($team_code,KEY) ?>"></a></li>
     <li id="location-li" class="location"><a href="index.php"></a></li>
   </ul>
 </div>

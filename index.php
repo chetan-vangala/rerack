@@ -11,7 +11,7 @@ $(document).ready(function(){
         $data = $_POST['code'];
         $house  = $h->find(array('code'=> $data));
         if($data != null && !empty($house)){
-          redirect_to('dashboard.php?house=' . $data);
+          redirect_to('dashboard.php?id=' . $data);
         } elseif($data != null && empty($house)){  
           print_errors(array('House not found. Try Again.'));
         } else {

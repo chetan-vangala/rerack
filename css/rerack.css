@@ -51,12 +51,12 @@ td {
   padding: 10px; }
 
 body {
-  background: #44392e url(/images/wood-bg.jpg) no-repeat;
+  background: #3b3127 url(/images/wood-bg.jpg) no-repeat;
   max-width: 580px;
   max-height: 900px; }
 
 body#login {
-  background: #44392e url(/images/login.jpg) no-repeat; }
+  background: #3b3127 url(/images/login.jpg) no-repeat; }
   body#login #code-input {
     position: absolute;
     top: 545px;

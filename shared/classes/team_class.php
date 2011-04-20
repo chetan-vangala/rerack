@@ -17,8 +17,8 @@ class Team extends Model{
       $i = $tab->tableUpdate($this->house_id, $this->id, $numTables, $playing);
       if(!$i){
         //echo "$this->id,  $this->house_id,  " . $house[0]->id . ",  ";
-        $house[0]->top_team_id = $this->id;
-        $house[0]->update();
+        //$house[0]->top_team_id = $this->id;
+        //$house[0]->update();
       }
     } else {
       $house[0]->left += 1;

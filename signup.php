@@ -1,26 +1,19 @@
 <?php 
-
 require('shared/_head.php'); 
 require('shared/_header.php');
 
 $team = new team();
-//Has the form been submitted?
 if(count($_POST) > 0){
   $data = $_POST['team'];
   $errors = array();
-
-  //Verify the fields are filled out
   if(!ene($data,array('name','number','player','teammate'))){
     $errors[] = 'All fields must be complete.';
   }
-  //If there are no error thus far, continue creating the survey
   if(empty($errors)){
-    //Update all the attributes we can in the array.
-    //array_push($data, array('house_id' => ));
     $team->update_attributes($data);
     if($team->create()){
       //echo 'success';
-      redirect_to("dashboard.php?house=" . $the_code);
+      redirect_to("dashboard.php?id=$the_code&t=" . encrypt($team->id,KEY));
       return;
     } else {
       $errors[] = "Unable to create team.";
@@ -34,6 +27,7 @@ if(count($_POST) > 0){
 <script type="text/javascript">
 $(document).ready(function(){
   $('#number').focus();
+  $('#sec-title').text('team signup');
 });
 </script>
 </head>
