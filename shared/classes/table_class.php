@@ -20,7 +20,7 @@ class Table extends Model{
       }
       $tmp = $team->find(array("house_id=$house->id", "queued=1"));
       $team = $tmp[0];
-      $house->left -= 1;
+
       $house->played += 1;
       $house->save();      
       $t_del[0]->delete();
@@ -37,7 +37,9 @@ class Table extends Model{
     if($p < ($numTables * 2)){
       echo "<br />less:  $p $team->id $numTables"; 
       $team->queued = 0;
+      $house->left -= 1;
       $team->save();
+      $house->save();
       if(($found == 0) || ($found < $numTables && !($p%2) && $e_found == 0)){
         echo "<br />create:  $found $team->id $numTables $e_found";
         $temp = new Table();
@@ -53,7 +55,6 @@ class Table extends Model{
       } else {
       }
     } else {
-      echo ' queue ';
       $house->left += 1;
       $house->save();
       return -1;

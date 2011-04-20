@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL);
-define('KEY', '8h20or^}pP3I'); //Used to encrypt/decrypt ids
+define('KEY', '23423'); //Used to encrypt/decrypt ids
 
 define('DB_USERNAME', 'rerack'); //Username
 define('DB_PASSWORD', 'rerack'); //Password

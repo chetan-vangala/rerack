@@ -51,12 +51,12 @@ td {
   padding: 10px; }
 
 body {
-  background: #3b3127 url(/images/wood-bg.jpg) no-repeat;
+  background: #44392e url(/images/wood-bg.jpg) no-repeat;
   max-width: 580px;
   max-height: 900px; }
 
 body#login {
-  background: #3b3127 url(/images/login.jpg) no-repeat; }
+  background: #44392e url(/images/login.jpg) no-repeat; }
   body#login #code-input {
     position: absolute;
     top: 545px;
@@ -141,15 +141,17 @@ body#login {
     font-size: 20px;
     font-weight: bold;
     color: #4f4b47; }
-  #table-container .table .player, #table-container .table .opponent {
+  #table-container .table .player {
     position: absolute;
     top: 50px;
     left: 30px; }
-    #table-container .table .player h3 .score, #table-container .table .opponent h3 .score {
+    #table-container .table .player h3 .score {
       padding-left: 2px;
       font-size: 18px;
       color: #998675; }
   #table-container .table .opponent {
+    position: absolute;
+    top: 50px;
     text-align: right;
     right: 30px; }
 
