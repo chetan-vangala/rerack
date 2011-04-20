@@ -16,7 +16,7 @@ $(document).ready(function(){
         $opp = $t->find(array('id=' . $table->opponent_id));
         echo '<div class="table"><div class="number">' . $i . '</div>';
         echo '<div class="player"><h3>' . $team[0]->name . '<span class="score">' . $team[0]->wins . '</span></h3></div>';
-        echo '<div class="opponent"><h3>' . $opp[0]->name . '</h3></div></div>';
+        echo '<div class="opponent"><h3>' . ene_val($opp[0]->name) . '</h3></div></div>';
         $i++;
       }
     }
