@@ -12,10 +12,9 @@
   <h1 id="sec-title"></h1>
   <div id="record">
     <?php 
-      $top = $t->find(array('id=' . $house->top_team_id));
-      if(!empty($top)){
-        echo '<div class="games">' . $top[0]->wins . '</div><div class="meta"><p>current record</p><h2>';
-        echo $top[0]->name . '</h2></div>';
+      if(!empty($house->tt_name)){
+        echo '<div class="games">' . $house->tt_wins . '</div><div class="meta"><p>current record</p><h2>';
+        echo $house->tt_name . '</h2></div>';
       }
     ?>
   </div>

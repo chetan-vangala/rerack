@@ -17,9 +17,9 @@ class Table extends Model{
         $t_del = $team->find(array("id=" . $tab[0]->opponent_id));
         echo "<br />incumbent:  " . $team->id . "  " .  $tab[0]->opponent_id;  
       }
+      $team->highscore($house);
       $tmp = $team->find(array("house_id=$house->id", "queued=1"));
       $team = $tmp[0];
-
       $house->played += 1;
       $house->save();      
       $t_del[0]->delete();
@@ -36,7 +36,7 @@ class Table extends Model{
     if($p < ($numTables * 2)){
       echo "<br />less:  $p $team->id $numTables"; 
       $team->queued = 0;
-      $house->left -= 1;
+      if($house->left != 0) $house->left -= 1;
       $team->save();
       $house->save();
       if(($found == 0) || ($found < $numTables && !($p%2) && $e_found == 0)){
