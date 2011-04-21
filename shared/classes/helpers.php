@@ -63,12 +63,13 @@ function ene_val($array, $key1 = ""){
 }
 
 function print_errors($errors = array()){
-	if(empty($errors)) return; //nothing to do here
-	echo'<div id="errors">';
+  if(empty($errors)) return;	
+	$e = '<script>$(document).ready(function(){$("#errors").html("';
   foreach($errors as $value){
-  		echo "<p>" . $value . "</p>";
+  		 $e .= '<p>' . $value . '</p>';
   }
-	echo '</div>';
+  $e .= '");});</script>';
+	echo $e;
 }
 
 function mysql_time($time = 'NOW'){

@@ -9,6 +9,7 @@ $(document).ready(function(){
   <div id="table-container">
     <?php show_tables($the_id, $the_code) ?>
   </div>
+  <div id="errors"></div>
   <div id="house-deck">
     <div id="stats">
       <?php 

@@ -24,5 +24,6 @@ $(document).ready(function(){
       <input size="5" maxlength="5" type="text" class="clean" name="code" id="code" value="<?php echo ene_val($_POST,'code'); ?>" />
       <input class="inline-submit" type="submit" name="submit" value="go" />
     </form>
+    <div id="errors"></div>
   </body>
 </html>
