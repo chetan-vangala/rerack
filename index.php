@@ -5,7 +5,8 @@ $(document).ready(function(){
 });
 </script>
 </head>
-  <body id="login">
+<body>
+  <div id="wrapper">    
     <?php 
       if(count($_POST) > 0){
         $data = $_POST['code'];
@@ -19,11 +20,14 @@ $(document).ready(function(){
         }
       }
     ?>
-    <br />
-    <form id="code-input" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-      <input size="5" maxlength="5" type="text" class="clean" name="code" id="code" value="<?php echo ene_val($_POST,'code'); ?>" />
-      <input class="inline-submit" type="submit" name="submit" value="go" />
-    </form>
-    <div id="errors"></div>
-  </body>
+    <img src="/images/rr-logo.gif" id="center-logo" />
+    <div id="login">
+      <form id="code-input" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+        <input size="5" maxlength="5" type="text" class="clean" name="code" id="code" value="<?php echo ene_val($_POST,'code'); ?>" />
+        <input class="inline-submit" type="submit" name="submit" value="go" />
+      </form>
+      <div id="errors"></div>
+    </div>
+  </div>
+</body>
 </html>

@@ -41,6 +41,13 @@ input.clean
   background-color: transparent
   border: none
   
+#wrapper
+  position: relative
+  width: 640px
+  min-height: 800px
+  margin-left: -320px
+  left: 50%
+  
 #content-area
   padding: 10px 0
   
@@ -51,26 +58,29 @@ td
   padding: 10px
 
 body
-  background: #44392e url(/images/wood-bg.jpg) no-repeat
-  max-width: 580px
-  max-height: 900px
+  background: #44392e url(/images/wood-bg.jpg) top center no-repeat
+  
+#center-logo
+  position: relative
+  top: 180px
+  left: 90px
 
-body#login
-  background: #44392e url(/images/login.jpg) no-repeat
+#login
   #code-input 
     position: absolute
     top: 545px
     left: 127px
+    background: transparent url(/images/code-boxes.gif) top left no-repeat
     input
       font-family: "Courier New", "Courier", monospace
       font-weight: bold
-      padding: 15px 0 0 18px
+      padding: 10px 0 0 14px
       width: 450px
       height: 64px
       font-size: 50px
       font-weight: bold
       color: #4d3e31
-      letter-spacing: 50px      
+      letter-spacing: 50px    
   
 #top-nav
   position: relative

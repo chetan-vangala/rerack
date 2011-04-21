@@ -7,6 +7,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+<div id="wrapper">
   <?php
     require 'shared/_header.php';
     $team = new team();
@@ -55,4 +56,5 @@ $(document).ready(function(){
     </form>
   </div>  
   <div id="errors"></div>
+</div>
 </body>
