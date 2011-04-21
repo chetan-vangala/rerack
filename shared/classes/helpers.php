@@ -1,6 +1,6 @@
 <?php
 
-  function show_tables($hid, $c, $tid){
+  function show_tables($hid, $id, $tid){
     $tab = new Table();
     $t = new Team();
     $tables = $tab->find(array("house_id=$hid"));
@@ -18,7 +18,7 @@
           $class = $i == 1 ? 'opponent' : 'player';
           $h3 = "<div class='$class'><h3 id='team-" . $x[$i]->id . "'>";
           $link = $x[$i]->name;
-          if($tid == $table->team_id) $link = '<a href="' . link_to('win', $c, $x[$i]->id) . '" onclick="return' .  " confirm('". $x[$i]->name . " wins?')" . '">' . $x[$i]->name . "</a>";
+          if($tid == $table->team_id) $link = '<a href="' . link_to('win', $id, $x[$i]->id) . '" onclick="return' .  " confirm('". $x[$i]->name . " wins?')" . '">' . $x[$i]->name . "</a>";
           if($i == 0){
             $close = "<span class='score'>" . $x[$i]->wins . '</span></h3></div>';
           } else {
@@ -33,14 +33,14 @@
     }
   }
 
-function redirect_to($url){
-   echo "<script>window.open('" . $url . "','_parent');</script>";
-}
-
 function link_to($page, $c, $t){
-  $link = "$page.php?id=$c";
+  $link = "/$page.php?id=$c";
   if(isset($t)) $link .= "&t=" . encrypt($t, KEY);
   return $link;
+}
+
+function redirect_to($url){
+   echo "<script>window.open('" . $url . "','_parent');</script>";
 }
 
 function exists_not_empty($array, $key){

@@ -14,6 +14,7 @@
     <!--script src="/js/jquery.mobile.min.js" type="text/javascript"></script-->
     <script src="/js/rerack.js" type="text/javascript"></script>
     <?php
+      $the_code = $the_id = $team_code = $the_team = $house = null;
       $h = new House();
       $t = new Team();
       $tab = new Table();
@@ -32,6 +33,8 @@
         $the_team  = $t->find(array('id'=> $team_code));
         if(!empty($the_team)){
           $the_team = $the_team[0];
+        } else {
+          $the_team = null;
         }
       } else {
         $team_code = '';

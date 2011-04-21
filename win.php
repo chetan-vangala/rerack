@@ -3,6 +3,7 @@
   $team = $t->find(array("id=$team_code"));
   if(!empty($team)){
    $team[0]->win();
+   echo 'success';
   } else {
     echo 'Error. Invalid team.';    
   }
