@@ -1,6 +1,6 @@
 <?php
 
-  function show_tables($hid, $c){
+  function show_tables($hid, $c, $tid){
     $tab = new Table();
     $t = new Team();
     $tables = $tab->find(array("house_id=$hid"));
@@ -16,13 +16,15 @@
         echo '<div class="table"><div class="number">' . $i . '</div>';
         for($i = 0; $i < count($team); $i++) {
           $class = $i == 1 ? 'opponent' : 'player';
-          $link = "<div class='$class'><h3 id='team-" . $team[$i]->id . "'><a href='" . link_to('win', $c, $team[$i]->id) . "'>" . $team[$i]->name . "</a>";
+          $h3 = "<div class='$class'><h3 id='team-" . $team[$i]->id . "'>";
+          $link = $team[$i]->name;
+          if($tid == $table->team_id) $link = "<a href='" . link_to('win', $c, $team[$i]->id) . "'>" . $team[$i]->name . "</a>";
           if($i == 0){
             $close = "<span class='score'>" . $team[$i]->wins . '</span></h3></div>';
           } else {
             $close = '</h3></div>';
           }
-          echo $link . $close;
+          echo $h3 . $link . $close;
         }
         $i++;
       }

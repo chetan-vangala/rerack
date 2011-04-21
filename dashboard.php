@@ -7,7 +7,7 @@ $(document).ready(function(){
 </script>
 <div id="content-area">
   <div id="table-container">
-    <?php show_tables($the_id, $the_code) ?>
+    <?php show_tables($the_id, $the_code, $team_code) ?>
   </div>
   <div id="errors"></div>
   <div id="house-deck">
