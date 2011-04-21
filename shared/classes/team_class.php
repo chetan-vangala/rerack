@@ -1,6 +1,7 @@
 <?php
 
 class Team extends Model{
+
   function after_create() {
     $this->manageQueue(0);
   }

@@ -4,6 +4,7 @@ class Table extends Model{
 
   function tableUpdate($team, $house, $p, $win){
     $numTables = $house->tables;
+    
     if($win){
       $tab = $this->find(array("team_id=$team->id OR opponent_id=$team->id"), 0, 1);
       if ($team->id == $tab[0]->opponent_id){ //opponent

@@ -1,14 +1,44 @@
 <?php
 
-//Redirect you somewhere else
+  function show_tables($hid, $c){
+    $tab = new Table();
+    $t = new Team();
+    $tables = $tab->find(array("house_id=$hid"));
+    if(!empty($tables)){
+      $i = 1;
+      foreach($tables as $table){
+        $temp = $t->find(array('id=' . $table->team_id));
+        $team[0] = $temp[0];
+        if($table->opponent_id != 0){
+          $temp = $t->find(array('id=' . $table->opponent_id));
+          $team[1] = $temp[0];
+        }
+        echo '<div class="table"><div class="number">' . $i . '</div>';
+        for($i = 0; $i < count($team); $i++) {
+          $class = $i == 1 ? 'opponent' : 'player';
+          $link = "<div class='$class'><h3 id='team-" . $team[$i]->id . "'><a href='" . link_to('win', $c, $team[$i]->id) . "'>" . $team[$i]->name . "</a>";
+          if($i == 0){
+            $close = "<span class='score'>" . $team[$i]->wins . '</span></h3></div>';
+          } else {
+            $close = '</h3></div>';
+          }
+          echo $link . $close;
+        }
+        $i++;
+      }
+    }
+  }
+
 function redirect_to($url){
-   //header("Location: $url",true,302);
-   //exit();
    echo "<script>window.open('" . $url . "','_parent');</script>";
 }
 
-//Test for array key presence and value
-//aka exists_not_empty
+function link_to($page, $c, $t){
+  $link = "$page.php?id=$c";
+  if(isset($t)) $link .= "&t=" . encrypt($t, KEY);
+  return $link;
+}
+
 function exists_not_empty($array, $key){
   if(is_array($key)){
     $ret = true;
@@ -32,8 +62,6 @@ function ene_val($array, $key1 = ""){
   }
 }
 
-//Print error messages
-//Might want to clean this up to be prettier
 function print_errors($errors = array()){
 	if(empty($errors)) return; //nothing to do here
 	echo'<div id="errors">';

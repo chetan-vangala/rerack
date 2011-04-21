@@ -6,6 +6,6 @@
   } else {
     echo 'Error. Invalid team.';    
   }
-  redirect_to("dashboard.php?id=$the_code&t=" . encrypt($team_code,KEY));
+  redirect_to(link_to('dashboard', $the_code, $team_code));
   
 ?>

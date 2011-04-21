@@ -7,28 +7,7 @@ $(document).ready(function(){
 </script>
 <div id="content-area">
   <div id="table-container">
-    <?php
-    $tables = $tab->find(array("house_id=$the_id"));
-    if(!empty($tables)){
-      $i = 1;
-      foreach($tables as $table){
-        $team = $t->find(array('id=' . $table->team_id));
-        $opp = $t->find(array('id=' . $table->opponent_id));
-        $on = '';
-        $oid = '';
-        $o = 0;
-        if(!empty($opp)) {
-          $o = 1;
-          $on = $opp[0]->name;
-          $oid = $opp[0]->id;
-        }
-        echo '<div class="table"><div class="number">' . $i . '</div>';
-        echo '<div class="player"><h3 id=team-' . $team[0]->id .'><a href="win.php?id=' . $the_code . '&t=' . encrypt($table->team_id,KEY) . '">' . $team[0]->name . '</a><span class="score">' . $team[0]->wins . '</span></h3></div>';
-        echo '<div class="opponent"><h3 id=team-' . $oid .'><a href="win.php?id=' . $the_code . '&t=' . encrypt($oid,KEY) . '">' . $on . '</a></h3></div></div>';
-        $i++;
-      }
-    }
-    ?>
+    <?php show_tables($the_id, $the_code) ?>
   </div>
   <div id="house-deck">
     <div id="stats">
