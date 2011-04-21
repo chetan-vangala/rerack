@@ -5,6 +5,19 @@ $(document).ready(function(){
   $('#sec-title').text('ponglist');
 });
 </script>
+  <ul>
+    <?php
+    $teams = $t->find(array('queued=0', "house_id=$the_id"));
+    if(!empty($teams)){
+      $i = 0;
+      foreach($teams as $team){
+        echo '<li>' . $team->name . '</li>';
+        if($i == 3) continue;
+        $i++;
+      }
+    }
+    ?>
+    </ul>
 <div id="house-deck">
   <table>
   <?php
