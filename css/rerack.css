@@ -17,7 +17,7 @@ h1 {
   font-weight: bold; }
 
 h2 {
-  font-size: 40px;
+  font-size: 36px;
   color: #dd310a; }
 
 h3 {
@@ -132,12 +132,12 @@ body {
       font-size: 58px;
       font-weight: bold; }
     #page-top #record .meta {
-      padding: 15px 5px 0 0;
+      padding: 7px 5px 0 0;
       float: right;
       text-align: right; }
       #page-top #record .meta p {
         font-size: 15px;
-        line-height: 1px; }
+        line-height: 13px; }
 
 #table-container .table {
   position: relative;
