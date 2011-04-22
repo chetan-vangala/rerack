@@ -50,7 +50,6 @@ input.clean {
 #wrapper {
   position: relative;
   width: 640px;
-  left: 80px;
   min-height: 700px; }
 
 #content-area {
