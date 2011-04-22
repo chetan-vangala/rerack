@@ -1,6 +1,8 @@
 <div id="top-nav">
   <div id="title-bar">
-    <?php echo "$house->name" ?>
+    <span class="left"><?php echo "$house->name" ?></span>
+    <span><?php echo "$house->code" ?></span>
+    <span class="right"><span class="small">sms </span><?php echo '('.substr(TF,0,3).') '.substr(TF,3,3).'-'.substr(TF,6,10) ?></span>
   </div>
   <ul>
     <li id="mug-li" class="mug"><a href="<?php echo link_to('dashboard', $the_code, $team_code) ?>"></a></li>

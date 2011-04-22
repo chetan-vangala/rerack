@@ -37,6 +37,12 @@ h4 {
   color: #876f58;
   font-weight: 300; }
 
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
 .description {
   font-size: 12px; }
 
@@ -98,9 +104,13 @@ td {
     left: 0;
     width: 620px;
     padding: 4px 10px;
-    color: #856c68;
-    font-size: 22px;
-    text-transform: uppercase; }
+    text-align: center; }
+    #top-nav #title-bar span.small {
+      font-size: 12px; }
+    #top-nav #title-bar span {
+      color: #856c68;
+      font-size: 22px;
+      text-transform: uppercase; }
   #top-nav ul {
     position: absolute;
     top: 50px;
