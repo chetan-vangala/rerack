@@ -5,13 +5,13 @@
   <head>
     <title>rerackapp.com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
     <link href='http://fonts.googleapis.com/css?family=Kreon:light,regular,bold' rel='stylesheet' type='text/css'>
     <link href="/css/rerack.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="/images/favicon.ico" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="image_src" href="/images/thumb.png" />
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <!--script src="/js/jquery.mobile.min.js" type="text/javascript"></script-->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
     <script src="/js/rerack.js" type="text/javascript"></script>
     <?php
       $the_code = $the_id = $team_code = $the_team = $house = null;
