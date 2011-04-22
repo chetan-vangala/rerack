@@ -5,7 +5,7 @@
   <head>
     <title>rerackapp.com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=640; height=device-height; initial-scale=1.0; maximum-scale=1.0; user-scalable=yes; target-densitydpi=device-dpi;">
+    <meta name="viewport" content="width=640; height=device-height; initial-scale=0.5; maximum-scale=1.0; user-scalable=yes; target-densitydpi=device-dpi;">
     <meta name="HandheldFriendly" content="true" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href='http://fonts.googleapis.com/css?family=Kreon:light,regular,bold' rel='stylesheet' type='text/css'>
