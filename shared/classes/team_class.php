@@ -27,16 +27,13 @@ class Team extends Model{
   }
   
   function notify($h){
-    $ApiVersion = "2010-04-01";
-    $AccountSid = "ACb421c4f6d7aa53a5f87cc9d11e51aaa0";
-    $AuthToken = "720ff345fca3ac9ae8422c9272568b89";
-    $client = new TwilioRestClient($AccountSid, $AuthToken);
+    $client = new TwilioRestClient(TSID, TAT);
     if(strlen($this->number) == 10){
-      $client->request("/$ApiVersion/Accounts/$AccountSid/SMS/Messages", 
+      $client->request(TAV . "/Accounts/" . TSID . "/SMS/Messages", 
           "POST", array(
           "To" => $this->number,
-          "From" => '415-599-2671',
-          "Body" => "Grab some beer and get to the table at $h->name. You're up!"
+          "From" => TF,
+          "Body" => "Hey, $this->player! Find $this->teammate, grab some beer, and rerack the table at $h->name. Team '$this->name' is up!"
       ));
     }
   }
