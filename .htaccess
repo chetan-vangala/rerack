@@ -1,5 +1,0 @@
-Options +FollowSymLinks
-RewriteEngine On
-RewriteOptions Inherit
-
-RewriteRule ^d/([a-z0-9]{5})/?$ dashboard.php?house=$1 [NC]
