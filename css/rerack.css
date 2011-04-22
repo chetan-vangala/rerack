@@ -6,7 +6,7 @@ body, a, p, div, li, h1, h2, h3, h4, td, input, span {
   color: #cccccc; }
 
 body {
-  background: #44392e url(/images/wood-bg.jpg) top left no-repeat; }
+  background: #44392e url(/images/wood-bg.jpg) top center no-repeat; }
 
 a {
   text-decoration: none;
@@ -37,6 +37,11 @@ h4 {
 
 .inline-submit {
   visibility: hidden; }
+
+input:focus {
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 input.clean {
   background-color: transparent;
