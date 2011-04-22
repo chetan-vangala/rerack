@@ -23,6 +23,7 @@ class Table extends Model{
       if($p < ($numTables * 2)){
         $team->queued = 0;
         $team->save();
+        if($w) $team->notify($house);
         if($house->left != 0) $house->left -= 1;
         $house->save();
         if(($found == 0) || ($found < $numTables && !($p%2) && $e_found == 0)){
@@ -66,7 +67,11 @@ class Table extends Model{
     $tab[0]->save();
     //return next team in queue, or null
     $tmp = $team->find(array("house_id=$house->id", "queued=1"));
-    return !empty($tmp) ? $tmp[0] : null;
+    if(!empty($tmp)){
+      return $tmp[0];
+    } else {
+       null;
+    }  
   }
 }
 ?>
