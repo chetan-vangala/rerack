@@ -38,6 +38,7 @@ $(document).ready(function(){
     </div>
     <?php require 'shared/_teambar.php' ?>
   </div>
+  </div>
 </div>
 </body>
 </html>

@@ -17,7 +17,6 @@ if(count($_POST) > 0){
     }
   }
     print_errors($errors);
-  }
 } else {
 }
 ?>
