@@ -31,7 +31,7 @@ $(document).ready(function(){
     <img src="/images/rr-logo.gif" id="center-logo" />
     <div id="login" data-role="content">
       <form id="code-input" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-        <input size="5" maxlength="5" type="text" class="clean" name="code" id="code" value="<?php echo ene_val($_POST,'code'); ?>" />
+        <input spellcheck="false"" size="5" maxlength="5" type="text" class="clean" name="code" id="code" value="<?php echo ene_val($_POST,'code'); ?>" />
         <input class="inline-submit" type="submit" value="go" />
       </form>
       <div id="errors"></div>
