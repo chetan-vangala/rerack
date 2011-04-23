@@ -78,8 +78,8 @@ td {
   left: 90px; }
 
 #login #code-input {
-  position: absolute;
-  top: 545px;
+  position: relative;
+  top: 280px;
   left: 127px;
   background: transparent url(/images/code-boxes.gif) top left no-repeat; }
   #login #code-input input {
@@ -92,6 +92,8 @@ td {
     font-weight: bold;
     color: #4d3e31;
     letter-spacing: 50px; }
+#login #errors {
+  margin: 20px 0 0 115px; }
 
 #top-nav {
   position: relative;

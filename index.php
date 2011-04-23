@@ -1,7 +1,15 @@
 <?php require('shared/_head.php'); ?>
 <script type="text/javascript">
 $(document).ready(function(){
-  $('#code').focus();
+  if($('#code').val().length == 0) $('#code').focus();
+  
+  $('#code').keyup(function(){
+    if($('#code').val().length == 5){
+      
+      $('#code-input').get(0).submit('');
+      //alert('here');
+    }
+  });
 });
 </script>
 </head>
@@ -24,7 +32,7 @@ $(document).ready(function(){
     <div id="login" data-role="content">
       <form id="code-input" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
         <input size="5" maxlength="5" type="text" class="clean" name="code" id="code" value="<?php echo ene_val($_POST,'code'); ?>" />
-        <input class="inline-submit" type="submit" name="submit" value="go" />
+        <input class="inline-submit" type="submit" value="go" />
       </form>
       <div id="errors"></div>
     </div>
