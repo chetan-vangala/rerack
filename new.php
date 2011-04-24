@@ -23,9 +23,7 @@ if(count($_POST) > 0){
 </head>
 <body>
   <form id="create-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-    <label class="description" for="name">House Name:</label><br />
-    <input class="wide" type="text" name="house[name]" id="name" value="<?php echo double_ene_val($_POST,'house','name'); ?>" />
-    <br />
+    <input class="clean" type="text" maxlength="10" name="house[name]" id="number" onblur="if (this.value == ''){this.value = 'your name';}" onfocus="if (this.value == 'your name') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'house','name'); echo $x != '' ? $x : 'your name'; ?>" />
     <label class="description" for="name">Number of Tables:</label><br />
     <input class="wide" type="text" name="house[tables]" id="tables" value="<?php echo double_ene_val($_POST,'house','tables'); ?>" />
     <br />

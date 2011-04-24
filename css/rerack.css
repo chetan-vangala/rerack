@@ -122,7 +122,7 @@ td {
     left: 260px; }
     #top-nav ul li {
       display: inline-block;
-      margin-left: 50px;
+      margin-left: 45px;
       width: 68px;
       height: 65px;
       cursor: pointer; }
@@ -130,8 +130,8 @@ td {
         background: transparent url(/images/mug.gif) left repeat-x; }
       #top-nav ul li.list {
         background: transparent url(/images/list.gif) left repeat-x; }
-      #top-nav ul li.location {
-        background: transparent url(/images/location.gif) left repeat-x; }
+      #top-nav ul li.rules {
+        background: transparent url(/images/rules.gif) left repeat-x; }
       #top-nav ul li:hover, #top-nav ul li.active {
         background-position: right; }
       #top-nav ul li a {
