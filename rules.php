@@ -1,8 +1,8 @@
 <?php require('shared/_head.php'); ?>
 <script type="text/javascript">
 $(document).ready(function(){
-  $('#list-li').addClass('active');
-  $('#sec-title').text('ponglist');
+  $('#rules-li').addClass('active');
+  $('#sec-title').text('rules');
 });
 </script>
 </head>
@@ -12,6 +12,6 @@ $(document).ready(function(){
   <div id="house-rules">
     <?php echo $house->rules ?>
   </div>
-  <?php require 'shared/_teambar.php' ?>\
 </div>
+<?php require 'shared/_teambar.php' ?>
 </body>

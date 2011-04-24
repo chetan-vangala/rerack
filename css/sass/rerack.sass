@@ -1,6 +1,6 @@
 @import url('reset.css')
 
-body, a, p, div, li, h1, h2, h3, h4, td, input, span
+body, a, p, div, li, h1, h2, h3, h4, td, input, span, textarea
   font-family: 'Kreon', Verdana, sans-serif
   font-weight: regular
   font-size: 32px
@@ -54,7 +54,7 @@ input:focus
   border: none
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 
-input.clean
+input.clean, textarea.clean
   background-color: transparent
   border: none
 
@@ -212,7 +212,7 @@ td
 #house-deck
   position: relative
   margin-top: 40px
-  height: 260px
+  min-height: 260px
   padding: 0 10px
   width: 620px
   li, td
@@ -281,3 +281,16 @@ td
     width: 530px
     padding: 10px 0 0 0 
     margin-bottom: 20px
+  #rules
+    padding-top: 20px
+    font-size: 18px
+    text-align: center
+    width: 530px
+    min-height: 200px
+    
+    
+#house-rules
+  font-size: 20px
+  line-height: 30px
+  min-height: 260px
+  padding: 20px

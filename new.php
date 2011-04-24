@@ -6,10 +6,7 @@ if(count($_POST) > 0){
   $data = $_POST['house'];
   $udata = $_POST['user'];
   $errors = array();
-  if(!ene($data,array('name','tables'))){
-    $errors[] = 'All fields must be complete.';
-  }
-  $rf1 = array('name', 'tables');
+  $rf1 = array('name', 'tables', 'rules');
   $rf2 = array('name', 'email', 'number', 'password');
   if(ene($data,$rf1) && ene($udata,$rf2) && $udata['password']!='your password' && is_numeric($data['tables'])){
     if(!is_numeric($udata['number']) || strlen($udata['number']) != 10){
@@ -26,6 +23,7 @@ if(count($_POST) > 0){
     }
   }
   if(empty($errors)){
+    $data['rules'] = nl2br($data['rules']);
     $user->update_attributes($udata);
     $house->update_attributes($data);
     if($house->create() && $user->create()){
@@ -53,7 +51,7 @@ if(count($_POST) > 0){
       <input class="clean" type="text" name="user[email]" id="email" onblur="if (this.value == ''){this.value = 'email address';}" onfocus="if (this.value == 'email address') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'user','email'); echo $x != '' ? $x : 'email address'; ?>" />
       <input class="clean" type="text" maxlength="10" name="user[number]" id="number" onblur="if (this.value == ''){this.value = 'your cell number';}" onfocus="if (this.value == 'your cell number') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'user','number'); echo $x != '' ? $x : 'your cell number'; ?>" />
       <input class="clean" type="text" name="user[password]" id="password" onblur="if (this.value == ''){this.value = 'your password';}" onfocus="if (this.value == 'your password') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'user','password'); echo $x != '' ? $x : 'your password'; ?>" />
-  
+      <textarea class="clean" id="rules" name="house[rules]">House Rules Here</textarea>
       <input class="inline-submit" type="submit" name="submit" value="Finish" />
     </form><div id="errors"></div>
   </div>

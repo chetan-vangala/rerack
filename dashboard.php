@@ -36,9 +36,9 @@ $(document).ready(function(){
       ?>
       </ul>
     </div>
-    <?php require 'shared/_teambar.php' ?>
   </div>
-  </div>
+</div>
+<?php require 'shared/_teambar.php' ?>
 </div>
 </body>
 </html>
