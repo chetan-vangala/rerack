@@ -45,7 +45,10 @@ if(count($_POST) > 0){
   $(document).ready(function(){
     $('#name').focus();
     $('#rules').focus(function(){
-      
+      if($(this).val() == "House Rules Here\nOne Per Line") $(this).val('');
+    });
+    $('#rules').blur(function(){
+      if($(this).val() == '') $(this).val("House Rules Here\nOne Per Line");
     });
   });
 </script>
