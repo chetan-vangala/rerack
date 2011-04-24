@@ -11,7 +11,7 @@ if(count($_POST) > 0){
   }
   $rf1 = array('name', 'tables');
   $rf2 = array('name', 'email', 'number', 'password');
-  if(ene($data,$rf1) && ene($udata,$rf2) && $udata['password']!='your password'){
+  if(ene($data,$rf1) && ene($udata,$rf2) && $udata['password']!='your password' && is_numeric($udata['tables'])){
     if(!is_numeric($udata['number']) || strlen($udata['number']) != 10){
       $errors[] ='Please enter a 10 digit cell number.';
     }
@@ -33,7 +33,7 @@ if(count($_POST) > 0){
       $house->user_id = $user->id;
       $house->update();
       $user->update();
-      //redirect_to('index.php#confirm');
+      redirect_to('index.php#confirm');
       return;
     } else {
       $errors[] = "Unable to create account.";

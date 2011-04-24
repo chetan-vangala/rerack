@@ -3,11 +3,13 @@
 $(document).ready(function(){
   if($('#code').val().length == 0) $('#code').focus();
   
+  if(window.location.hash == '#confirm'){
+    $("#errors").text('Check your inbox for your code');
+  }
+  
   $('#code').keyup(function(){
     if($('#code').val().length == 5){
-      
       $('#code-input').get(0).submit('');
-      //alert('here');
     }
   });
 });

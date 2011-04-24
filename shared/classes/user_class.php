@@ -43,7 +43,7 @@ class User extends Model{
   function email_code($h){
     $to = $this->email;
     $subject = "Your rerack code for $h->name";
-    $text = "Hey $this->name,\n\nHere is your five-digit code: $h->code";
+    $text = "Hey $this->name,\n\n\nYour five-digit code: $h->code";
     return mail($to, $subject, $text, $this->headers);
   }
   
