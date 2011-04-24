@@ -43,6 +43,7 @@ if(count($_POST) > 0){
 ?>
 </head>
 <body>
+  <img src="/images/rr-logo.gif" id="top-logo" />
   <div id="new-account">
     <form id="create-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
       <input class="clean" type="text" name="user[name]" id="name" onblur="if (this.value == ''){this.value = 'your name';}" onfocus="if (this.value == 'your name') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'user','name'); echo $x != '' ? $x : 'your name'; ?>" />
@@ -51,10 +52,11 @@ if(count($_POST) > 0){
       <input class="clean" type="text" name="user[email]" id="email" onblur="if (this.value == ''){this.value = 'email address';}" onfocus="if (this.value == 'email address') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'user','email'); echo $x != '' ? $x : 'email address'; ?>" />
       <input class="clean" type="text" maxlength="10" name="user[number]" id="number" onblur="if (this.value == ''){this.value = 'your cell number';}" onfocus="if (this.value == 'your cell number') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'user','number'); echo $x != '' ? $x : 'your cell number'; ?>" />
       <input class="clean" type="text" name="user[password]" id="password" onblur="if (this.value == ''){this.value = 'your password';}" onfocus="if (this.value == 'your password') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'user','password'); echo $x != '' ? $x : 'your password'; ?>" />
-      <textarea class="clean" id="rules" name="house[rules]">House Rules Here</textarea>
-      <input class="inline-submit" type="submit" name="submit" value="Finish" />
+      <textarea class="clean" id="rules" name="house[rules]">
+House Rules Here
+One Per Line</textarea>
+      <input class="new-submit" type="submit" name="submit" value="create account" />
     </form><div id="errors"></div>
   </div>
-  <img src="/images/rr-logo.gif" id="bottom-logo" />
 </div>  
 </body>
