@@ -79,9 +79,16 @@ td {
   top: 180px;
   left: 90px; }
 
-#login #code-input {
+#bottom-logo {
   position: relative;
+  top: 5px;
+  left: 90px; }
+
+#login {
+  position: relative;
+  width: 415px;
   top: 280px;
+  height: 120px;
   left: 127px;
   background: transparent url(/images/code-boxes.gif) top left no-repeat; }
   #login #code-input input {
@@ -94,9 +101,9 @@ td {
     font-weight: bold;
     color: #4d3e31;
     letter-spacing: 50px; }
-#login #errors {
-  position: relative;
-  text-align: center; }
+  #login #errors {
+    position: relative;
+    text-align: center; }
 
 #top-nav {
   position: relative;
@@ -241,7 +248,7 @@ td {
   height: 450px;
   padding: 0 10px;
   background: transparent url(/images/signup-boxes.gif) no-repeat; }
-  #signup-fields input {
+  #signup-fields input[type=text] {
     text-align: center;
     height: 64px;
     font-size: 50px;
@@ -250,9 +257,9 @@ td {
     width: 530px;
     padding: 10px 0 0 0;
     margin-bottom: 20px; }
-    #signup-fields input.separator {
+    #signup-fields input[type=text].separator {
       margin-top: 63px; }
-    #signup-fields input.light {
+    #signup-fields input[type=text].light {
       color: #eccfb2; }
 
 #new-account {
@@ -261,12 +268,12 @@ td {
   left: 45px;
   width: 530px;
   padding: 0 10px; }
-  #new-account input {
+  #new-account input[type=text] {
     text-align: center;
     height: 64px;
-    font-size: 50px;
+    font-size: 46px;
     font-weight: bold;
-    color: #876f58;
+    color: #b27d39;
     width: 530px;
     padding: 10px 0 0 0;
     margin-bottom: 20px; }

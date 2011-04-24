@@ -57,6 +57,6 @@ if(count($_POST) > 0){
       <input class="inline-submit" type="submit" name="submit" value="Finish" />
     </form><div id="errors"></div>
   </div>
-  
+  <img src="/images/rr-logo.gif" id="bottom-logo" />
 </div>  
 </body>

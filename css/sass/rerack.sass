@@ -79,23 +79,29 @@ td
   position: relative
   top: 180px
   left: 90px
+  
+#bottom-logo
+  position: relative
+  top: 5px
+  left: 90px
 
 #login
-  #code-input 
-    position: relative
-    top: 280px
-    left: 127px
-    background: transparent url(/images/code-boxes.gif) top left no-repeat
-    input
-      font-family: "Courier New", "Courier", monospace
-      font-weight: bold
-      padding: 10px 0 0 14px
-      width: 415px
-      height: 64px
-      font-size: 50px
-      font-weight: bold
-      color: #4d3e31
-      letter-spacing: 50px    
+  position: relative
+  width: 415px
+  top: 280px
+  height: 120px
+  left: 127px
+  background: transparent url(/images/code-boxes.gif) top left no-repeat
+  #code-input input
+    font-family: "Courier New", "Courier", monospace
+    font-weight: bold
+    padding: 10px 0 0 14px
+    width: 415px
+    height: 64px
+    font-size: 50px
+    font-weight: bold
+    color: #4d3e31
+    letter-spacing: 50px    
   #errors
     position: relative
     text-align: center
@@ -244,7 +250,7 @@ td
   height: 450px
   padding: 0 10px
   background: transparent url(/images/signup-boxes.gif) no-repeat
-  input
+  input[type=text]
     text-align: center
     height: 64px
     font-size: 50px
@@ -264,12 +270,12 @@ td
   left: 45px
   width: 530px
   padding: 0 10px
-  input
+  input[type=text]
     text-align: center
     height: 64px
-    font-size: 50px
+    font-size: 46px
     font-weight: bold
-    color: #876f58
+    color: #b27d39
     width: 530px
     padding: 10px 0 0 0 
     margin-bottom: 20px
