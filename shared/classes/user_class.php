@@ -2,10 +2,11 @@
 
 class User extends Model{  
 
-  private $headers = "From: RetailOpGroup Screening <screening@retailopgroup.com>\n"; //headers for email
-
-  function name(){
-    return $this->first_name . " " . $this->last_name;
+  private $headers = "From: Rerack App <accounts@rerackapp.com>\n"; //headers for email
+  
+  function after_create(){
+    $h = new House();
+    $this->email_code($h);
   }
 
   function salt_password($password){
@@ -36,6 +37,14 @@ class User extends Model{
       }
     }
     return $this->guid;
+  }
+  
+  function email_code($h){
+    $to = $this->email;
+    $h->find(array("user_id=$this->id"));
+    $subject = "Your rerack code for $h->name";
+    $text = "Here is your five-digit code:\n\n$h->code";
+    return @mail($to, $subject, $text, $this->headers);
   }
   
 }

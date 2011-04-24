@@ -16,7 +16,6 @@ $(document).ready(function(){
       $die = 0;
       $errors = array();
       $fields = array('name','number','player','teammate', 'house_id');
-      $titles = array('', 'your cell number', 'your first name', 'teammate name', '');
       if(ene($data,$fields)){ //validate data
         $i = 0;
         if(!is_numeric($data['number'])){
@@ -39,15 +38,14 @@ $(document).ready(function(){
       if(empty($errors)){
         $team->update_attributes($data);
         if($team->create()){
-          redirect_to("dashboard.php?id=$the_code&t=" . encrypt($team->id,KEY));
+          redirect_to("index.php#confirm");
           return;
         } else {
-          $errors[] = "Unable to create team.";
+          $errors[] = "Unable to create account.";
         }
       }
       print_errors($errors);
     } else {
-      $team->name = "";
     }
   ?>
   <div id="signup-fields">
