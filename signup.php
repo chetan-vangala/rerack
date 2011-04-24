@@ -38,10 +38,10 @@ $(document).ready(function(){
       if(empty($errors)){
         $team->update_attributes($data);
         if($team->create()){
-          redirect_to("index.php#confirm");
+          redirect_to("index.php?id=$the_code&t=" . encrypt($team->id,KEY));
           return;
         } else {
-          $errors[] = "Unable to create account.";
+          $errors[] = "Unable to create team.";
         }
       }
       print_errors($errors);
