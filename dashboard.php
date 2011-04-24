@@ -7,7 +7,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<div id="wrapper">
+
   <?php require('shared/_header.php');?>
   <div id="content-area">
     <div id="table-container">

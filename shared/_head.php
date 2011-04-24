@@ -9,7 +9,9 @@
     <meta name="HandheldFriendly" content="true" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href='http://fonts.googleapis.com/css?family=Kreon:light,regular,bold' rel='stylesheet' type='text/css'>
-    <link href="/css/rerack.css" rel="stylesheet" type="text/css" media="screen and (max-width:800px)"/>
+    <link href="/css/rerack.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/css/wide.css" rel="stylesheet" type="text/css" media="screen and (min-width:801px)"/>
+    <link href="/css/display.css" rel="stylesheet" type="text/css" media="screen and (min-width:1360px)"/>
     <link rel="shortcut icon" href="/images/favicon.ico" />
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="image_src" href="/images/thumb.png" />

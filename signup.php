@@ -6,7 +6,6 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<div id="wrapper">
   <?php
     require 'shared/_header.php';
     $team = new team();
@@ -47,6 +46,7 @@ $(document).ready(function(){
     } else {
     }
   ?>
+  <div id="wrapper">
   <div id="signup-fields">
     <form id="create-form" action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="POST">
       <input class="clean light" type="text" name="team[name]" id="name" value="<?php echo double_ene_val($_POST,'team','name'); ?>" />

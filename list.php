@@ -7,8 +7,8 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<div id="wrapper">
   <?php require 'shared/_header.php'; ?>
+  <div id="wrapper">
   <div id="house-deck">
     <table>
     <?php
