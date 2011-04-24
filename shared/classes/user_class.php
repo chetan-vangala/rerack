@@ -4,9 +4,10 @@ class User extends Model{
 
   private $headers = "From: Rerack App <accounts@rerackapp.com>\n"; //headers for email
   
-  function after_create(){
+  function after_update(){
     $h = new House();
-    $this->email_code($h);
+    $h = $h->find(array("id=$this->house_id"));
+    $this->email_code($h[0]);
   }
 
   function salt_password($password){
@@ -41,10 +42,9 @@ class User extends Model{
   
   function email_code($h){
     $to = $this->email;
-    $h->find(array("user_id=$this->id"));
     $subject = "Your rerack code for $h->name";
-    $text = "Here is your five-digit code:\n\n$h->code";
-    return @mail($to, $subject, $text, $this->headers);
+    $text = "Hey $this->name,\n\nHere is your five-digit code: $h->code";
+    return mail($to, $subject, $text, $this->headers);
   }
   
 }

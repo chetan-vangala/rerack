@@ -12,17 +12,16 @@ if(count($_POST) > 0){
   $rf1 = array('name', 'tables');
   $rf2 = array('name', 'email', 'number', 'password');
   if(ene($data,$rf1) && ene($udata,$rf2) && $udata['password']!='your password'){
-    if(!is_numeric($udata['number'])){
+    if(!is_numeric($udata['number']) || strlen($udata['number']) != 10){
       $errors[] ='Please enter a 10 digit cell number.';
     }
   } else {
     $errors[] = 'All fields must be complete.';
   }
   $udata['password'] = $user->salt_password($udata['password']);
-  //Make sure the user hasn't already signed up
-  if(array_key_exists('house', $_POST) && ene($_POST['house'], 'email')){
+  if(array_key_exists('user', $_POST) && ene($_POST['user'], 'email')){
     $u = new User();
-    if($u->find(array('email' => $_POST['house']['email']), true)){
+    if($u->find(array('email' => $_POST['user']['email']), true)){
       $errors[] = "Email address already in use";
     }
   }
@@ -30,11 +29,11 @@ if(count($_POST) > 0){
     $user->update_attributes($udata);
     $house->update_attributes($data);
     if($house->create() && $user->create()){
-      $house->user_id = $user->id;
       $user->house_id = $house->id;
-      $user->save();
-      $house->save();
-      redirect_to('index.php');
+      $house->user_id = $user->id;
+      $house->update();
+      $user->update();
+      //redirect_to('index.php#confirm');
       return;
     } else {
       $errors[] = "Unable to create account.";
@@ -56,7 +55,8 @@ if(count($_POST) > 0){
       <input class="clean" type="text" name="user[password]" id="password" onblur="if (this.value == ''){this.value = 'your password';}" onfocus="if (this.value == 'your password') {this.value = '';}" value="<?php $x = double_ene_val($_POST,'user','password'); echo $x != '' ? $x : 'your password'; ?>" />
   
       <input class="inline-submit" type="submit" name="submit" value="Finish" />
-    </form>
+    </form><div id="errors"></div>
   </div>
+  
 </div>  
 </body>

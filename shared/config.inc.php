@@ -17,10 +17,10 @@ require_once 'classes/database.php';
 require_once 'classes/helpers.php';
 require_once 'classes/model.php';
 require_once 'classes/auth.php';
-require_once 'classes/user_class.php';
 require_once 'classes/team_class.php';
 require_once 'classes/house_class.php';
 require_once 'classes/table_class.php';
+require_once 'classes/user_class.php';
 
 session_start();
 ?>
