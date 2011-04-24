@@ -23,6 +23,6 @@ $(document).ready(function(){
     ?>
     </table>
   </div>
-</div>
 <?php require 'shared/_teambar.php' ?>
+</div>
 </body>

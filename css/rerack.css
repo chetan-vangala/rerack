@@ -7,7 +7,7 @@ body, a, p, div, li, h1, h2, h3, h4, td, input, span, textarea {
 
 body {
   background: #44392e url(/images/wood-bg.jpg) top center no-repeat;
-  min-height: 850px; }
+  height: 100%; }
 
 html, body {
   background-color: #44392e; }
@@ -63,7 +63,7 @@ input.clean, textarea.clean {
 #wrapper {
   position: relative;
   width: 640px;
-  min-height: 850px;
+  min-height: 900px;
   margin: 0 auto; }
 
 #content-area {

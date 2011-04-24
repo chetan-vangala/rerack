@@ -12,6 +12,6 @@ $(document).ready(function(){
   <div id="house-rules">
     <?php echo $house->rules ?>
   </div>
-</div>
 <?php require 'shared/_teambar.php' ?>
+</div>
 </body>
