@@ -69,7 +69,7 @@ input.clean {
   padding: 10px 0; }
 
 #errors {
-  padding: 20px; }
+  padding: 5px; }
 
 td {
   padding: 10px; }
@@ -86,7 +86,7 @@ td {
 
 #login {
   position: relative;
-  width: 415px;
+  width: 380px;
   top: 280px;
   height: 120px;
   left: 127px;
@@ -104,6 +104,8 @@ td {
   #login #errors {
     position: relative;
     text-align: center; }
+    #login #errors p {
+      font-size: 24px; }
 
 #top-nav {
   position: relative;
