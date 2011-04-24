@@ -38,7 +38,7 @@ $(document).ready(function(){
       if(empty($errors)){
         $team->update_attributes($data);
         if($team->create()){
-          redirect_to("index.php?id=$the_code&t=" . encrypt($team->id,KEY));
+          redirect_to(link_to('dashboard', $the_code, $team_code));
           return;
         } else {
           $errors[] = "Unable to create team.";
