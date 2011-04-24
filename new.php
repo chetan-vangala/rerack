@@ -41,6 +41,14 @@ if(count($_POST) > 0){
 } else {
 }
 ?>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#name').focus();
+    $('#rules').focus(function(){
+      
+    });
+  });
+</script>
 </head>
 <body>
   <img src="/images/rr-logo.gif" id="top-logo" />

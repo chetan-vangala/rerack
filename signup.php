@@ -1,7 +1,6 @@
 <?php require('shared/_head.php'); ?>
 <script type="text/javascript">
 $(document).ready(function(){
-  //$('#number').focus();
   $('#sec-title').text('signup');
 });
 </script>
