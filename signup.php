@@ -38,7 +38,7 @@ $(document).ready(function(){
       if(empty($errors)){
         $team->update_attributes($data);
         if($team->create()){
-          redirect_to(link_to('dashboard', $the_code, $team_code));
+          redirect_to(link_to('dashboard', $the_code, $team->id));
           return;
         } else {
           $errors[] = "Unable to create team.";
