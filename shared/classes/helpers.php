@@ -18,7 +18,7 @@
           $class = $i == 1 ? 'opponent' : 'player';
           $h3 = "<div class='$class'><h3 id='team-" . $x[$i]->id . "'>";
           $link = $x[$i]->name;
-          if($tid == $table->team_id) $link = '<a href="' . link_to('win', $id, $x[$i]->id) . '" onclick="return' .  " confirm('". $x[$i]->name . " wins?')" . '">' . $x[$i]->name . "</a>";
+          if($tid == $table->team_id) $link = '<a href="' . link_to('win', $id, $x[$i]->id) . '" onclick="return' .  " confirm('". $x[$i]->name . " win?')" . '">' . $x[$i]->name . "</a>";
           if($i == 0){
             $close = "<span class='score'>" . $x[$i]->wins . '</span></h3></div>';
           } else {
@@ -34,8 +34,9 @@
   }
 
 function link_to($page, $c, $t){
-  $link = "/$page.php?id=$c";
-  if(isset($t)) $link .= "&t=" . encrypt($t, KEY);
+  $link = "/$page.php";
+  $_SESSION['id'] = $c;
+  if(isset($t)) $_SESSION['t'] = encrypt($t, KEY);
   return $link;
 }
 

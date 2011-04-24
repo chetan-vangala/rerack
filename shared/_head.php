@@ -22,8 +22,8 @@
       $h = new House();
       $t = new Team();
       $tab = new Table();
-      if(isset($_GET['id'])){
-        $the_code = $_GET['id'];
+      if(isset($_SESSION['id'])){
+        $the_code = $_SESSION['id'];
         $house  = $h->find(array('code'=> $the_code));
         if(!empty($house)){
           $house = $house[0];
@@ -32,8 +32,8 @@
           redirect_to('index.php');
         }
       }
-      if(isset($_GET['t'])){
-        $team_code = decrypt($_GET['t'], KEY);
+      if(isset($_SESSION['t'])){
+        $team_code = decrypt($_SESSION['t'], KEY);
         $the_team  = $t->find(array('id'=> $team_code));
         if(!empty($the_team)){
           $the_team = $the_team[0];

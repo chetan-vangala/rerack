@@ -11,6 +11,7 @@
       <li id="list-li" class="list"><a href="<?php echo link_to('list', $the_code, $team_code) ?>"></a></li>
       <li id="rules-li" class="rules"><a href="<?php echo link_to('rules', $the_code, $team_code) ?>"></a></li>
     </ul>
+    <div id="location"><a href="index.php" onclick="return confirm('switch location?')"></a></div>
   </div>
 </div>
 <div id="wrapper">
