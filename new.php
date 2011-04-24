@@ -11,7 +11,7 @@ if(count($_POST) > 0){
   }
   $rf1 = array('name', 'tables');
   $rf2 = array('name', 'email', 'number', 'password');
-  if(ene($data,$rf1) && ene($udata,$rf2) && $udata['password']!='your password' && is_numeric($udata['tables'])){
+  if(ene($data,$rf1) && ene($udata,$rf2) && $udata['password']!='your password' && is_numeric($data['tables'])){
     if(!is_numeric($udata['number']) || strlen($udata['number']) != 10){
       $errors[] ='Please enter a 10 digit cell number.';
     }
