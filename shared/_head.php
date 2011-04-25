@@ -28,20 +28,20 @@
         if(!empty($house)){
           $house = $house[0];
           $the_id = $house->id;
+          if(isset($_SESSION['t'])){
+          $team_code = decrypt($_SESSION['t'], KEY);
+          $the_team  = $t->find(array('id'=> $team_code));
+          if(!empty($the_team)){
+            $the_team = $the_team[0];
+          } else {
+            $the_team = null;
+          }
+        } else {
+          $team_code = '';
+        }
         } else {
           redirect_to('index.php');
         }
-      }
-      if(isset($_SESSION['t'])){
-        $team_code = decrypt($_SESSION['t'], KEY);
-        $the_team  = $t->find(array('id'=> $team_code));
-        if(!empty($the_team)){
-          $the_team = $the_team[0];
-        } else {
-          $the_team = null;
-        }
-      } else {
-        $team_code = '';
       }
     ?>
     
