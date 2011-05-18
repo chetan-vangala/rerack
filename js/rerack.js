@@ -2,9 +2,11 @@ $(document).ready(function(){
   
     setTimeout(scrollTo,200,0,1)
   $("#fade-wrap").fadeIn(1000);
-    
 });
 
+function timedRefresh(timeoutPeriod) {
+	setTimeout("location.reload(true);",timeoutPeriod);
+}
   (function() {
     var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
     uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/iSfCo1UfFkD8Ig0mo7CXA.js';
