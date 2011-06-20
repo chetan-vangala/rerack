@@ -55,7 +55,8 @@ input:focus {
 
 input.clean, textarea.clean, input.clean:focus, textarea.clean:focus {
   background-color: transparent;
-  border: none; }
+  border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 #fade-wrap {
   display: none; }
