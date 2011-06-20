@@ -53,7 +53,7 @@ input:focus {
   border: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
-input.clean, textarea.clean {
+input.clean, textarea.clean, input.clean:focus, textarea.clean:focus {
   background-color: transparent;
   border: none; }
 
