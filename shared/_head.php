@@ -4,6 +4,10 @@
 <!-- chris butler did this - platformthirteen.com -->
   <head>
     <title>rerackapp.com</title>
+    <meta property="og:title" content="Rerack Beta" />
+    <meta property="og:description" content="Rerack is a beer-pong list that runs itself. Players can sign up, check the list, and be notified when they're up. Oh, and you can do it via SMS, too.
+We're currently in beta, and seeking testers and feedback. Enter your email address below to sign up." />
+    <meta property="og:image" content="http://rerackapp.com/images/thumbnail.jpg" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=640; height=device-height; initial-scale=0.5; maximum-scale=1.0; user-scalable=no; target-densitydpi=320;">
     <meta name="HandheldFriendly" content="true" />
