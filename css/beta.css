@@ -16,4 +16,8 @@
   border: none;
   color: #eccfb2; }
 .pfy-form-container form #tester_submit {
-  width: 100%; }
+  width: 100%;
+  background: none;
+  border: none;
+  color: #db781c;
+  font-size: 20px; }
