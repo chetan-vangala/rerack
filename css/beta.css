@@ -1,8 +1,10 @@
-#pfy-form-container h1 {
-  color: #c4975c; }
-#pfy-form-container p {
-  color: #efe5d7;
-  font-size: 18px; }
+#pfy-form-container form fieldset {
+  padding: 20px; }
+  #pfy-form-container form fieldset h1 {
+    color: #c4975c; }
+  #pfy-form-container form fieldset p {
+    color: #efe5d7;
+    font-size: 18px; }
 
 .pfy-form-container form input.long {
   background: transparent url(/images/input-bg-light.png) top left no-repeat;
@@ -10,6 +12,8 @@
   height: 73px;
   font-size: 50px;
   font-weight: bold;
-  width: 530px;
+  width: 500px;
   border: none;
   color: #eccfb2; }
+.pfy-form-container form #tester_submit {
+  width: 100%; }
