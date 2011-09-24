@@ -1,27 +1,61 @@
-#pfy-form-container form fieldset {
-  padding: 20px; }
-  #pfy-form-container form fieldset h1, #pfy-form-container form fieldset label {
-    color: #c4975c; }
-  #pfy-form-container form fieldset p {
-    color: #efe5d7;
-    font-size: 18px; }
+/*
+Syntax error: Inconsistent indentation: 1 space was used for indentation, but the rest of the document was indented using 2 spaces.
+        on line 25 of css/sass/beta.sass
 
-.pfy-form-container form {
-  padding-top: 20px; }
-  .pfy-form-container form input.long {
-    background: transparent url(/images/input-bg-light.png) top left no-repeat;
-    text-align: center;
-    height: 73px;
-    font-size: 50px;
-    font-weight: bold;
-    width: 500px;
-    border: none;
-    color: #eccfb2; }
-  .pfy-form-container form #tester_submit {
-    width: 100%;
-    background: none;
-    border: none;
-    color: #aa5d1e;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold; }
+20:     font-weight: bold
+21:     width: 500px
+22:     border: none
+23:     color: #eccfb2
+24:   #tester_submit
+25:     width: 100%
+26:     background: none
+27:     border: none
+28:     color: #aa5d1e
+29:     font-size: 20px
+30:     text-transform: uppercase
+
+Backtrace:
+css/sass/beta.sass:25
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/engine.rb:402:in `block in tabulate'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/engine.rb:360:in `each'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/engine.rb:360:in `each_with_index'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/engine.rb:360:in `tabulate'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/engine.rb:323:in `_to_tree'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/engine.rb:293:in `_render'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/engine.rb:240:in `render'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:319:in `update_stylesheet'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_stylesheets'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:175:in `each'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:175:in `block in update_stylesheets'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:173:in `each'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:173:in `update_stylesheets'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:252:in `block (4 levels) in watch'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `call'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:73:in `run_callback'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:55:in `callback_action'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/path.rb:35:in `update'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:39:in `block in modified'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `each'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:37:in `modified'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/state/directory.rb:18:in `refresh'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `each'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:17:in `block in run'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `loop'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/backends/polling.rb:15:in `run'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm/monitor.rb:26:in `run'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/vendor/fssm/lib/fssm.rb:20:in `monitor'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin/compiler.rb:245:in `watch'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/plugin.rb:111:in `method_missing'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/exec.rb:408:in `watch_or_update'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/exec.rb:294:in `process_result'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/exec.rb:41:in `parse'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/lib/sass/exec.rb:21:in `parse!'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/gems/sass-3.1.7/bin/sass:8:in `<top (required)>'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/bin/sass:19:in `load'
+/home/chris/.rvm/gems/ruby-1.9.2-p180@rerack/bin/sass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Inconsistent indentation: 1 space was used for indentation, but the rest of the document was indented using 2 spaces.\A         on line 25 of css/sass/beta.sass\A \A 20:     font-weight: bold\A 21:     width: 500px\A 22:     border: none\A 23:     color: #eccfb2\A 24:   #tester_submit\A 25:     width: 100%\A 26:     background: none\A 27:     border: none\A 28:     color: #aa5d1e\A 29:     font-size: 20px\A 30:     text-transform: uppercase"; }
