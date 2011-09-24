@@ -51,11 +51,14 @@ h4 {
 input:focus {
   outline: none;
   border: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none; }
 
-input.clean, textarea.clean {
+input.clean, textarea.clean, input.clean:focus, textarea.clean:focus {
   background-color: transparent;
-  border: none; }
+  border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none; }
 
 #fade-wrap {
   display: none; }
