@@ -7,8 +7,6 @@
   height: 73px;
   font-size: 50px;
   font-weight: bold;
-  color: #4d3e31;
   width: 530px;
-  border: none; }
-  .pfy-form-container form input.long.light {
-    color: #eccfb2; }
+  border: none;
+  color: #eccfb2; }
