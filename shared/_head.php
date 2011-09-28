@@ -6,7 +6,7 @@
     <title>rerackapp.com</title>
     <meta property="og:title" content="Rerack Beta" />
     <meta property="og:url" content="http://rerackapp.com/" />
-    <meta property="og:description" content="Rerack is a beer-pong list that runs itself. Players can sign up, check the list, and be notified when they're up. Oh, and you can do it via SMS, too. Sign up for a beta account to start hosting tables. Joining a list is free." />
+    <meta property="og:description" content="Rerack is a beer-pong list that runs itself. Players can sign up, check the list, and be notified when they're up. Oh, and you can do it via SMS, too. Sign up for a beta account to start hosting tables." />
     <meta property="og:image" content="http://rerackapp.com/images/thumbnail.jpg" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=640; height=device-height; initial-scale=0.5; maximum-scale=1.0; user-scalable=no; target-densitydpi=320;">
