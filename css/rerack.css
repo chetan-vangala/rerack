@@ -97,10 +97,15 @@ td {
   top: 5px;
   left: 60px; }
 
+#code {
+  text-align: center; }
+  #code a {
+    font-size: 22px; }
+
 #signup {
   position: relative;
   width: 530px;
-  top: 50px;
+  margin-top: 10px;
   left: 45px; }
 
 #login {

@@ -1,3 +1,6 @@
+html, body {
+  background-color: transparent; }
+
 #pfy-form-container form fieldset {
   padding: 20px; }
   #pfy-form-container form fieldset p, #pfy-form-container form fieldset h1 {
