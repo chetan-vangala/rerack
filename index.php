@@ -21,7 +21,10 @@
       <a href="/code.php">I already have a house code</a>
     </div>
     <div id="signup" data-role="content">
-      <iframe id='prefinery_iframe_inline' allowTransparency='true' width='100%' height='600' scrolling='no' frameborder='0' src="http://platformthirteen.prefinery.com/betas/2361/testers/new?display=inline"></iframe>
+      <iframe id='prefinery_iframe_inline' allowTransparency='true' width='100%' height='500' scrolling='no' frameborder='0' src="http://platformthirteen.prefinery.com/betas/2361/testers/new?display=inline"></iframe>
+    </div>
+    <div id="credits">
+      <a href="http://chrisbutler.me" target="_blank">Chris Butler did this.</a> 
     </div>
   </div>
 </body>

@@ -102,6 +102,12 @@ td {
   #code a {
     font-size: 22px; }
 
+#credits {
+  text-align: center; }
+  #credits a {
+    font-size: 18px;
+    color: #775134; }
+
 #signup {
   position: relative;
   width: 530px;
