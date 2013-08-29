@@ -1,13 +1,10 @@
 rerack
 ======
+Rerack is a beer-pong list that manages itself
 
-# Intro
+### Intro
 
-Rerack currently runs on PHP/MYSQL. You can find a sample database in the db/ directory.
-
------------------------
-
-List of requirements for the Final project submission:
+Rerack currently runs on PHP/MYSQL. You can find a sample database in the db/ directory
 
 ### Getting Started
 
