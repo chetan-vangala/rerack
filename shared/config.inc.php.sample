@@ -2,10 +2,10 @@
 error_reporting(E_ALL);
 define('KEY', '23423'); //Used to encrypt/decrypt ids
 
+define('DB_NAME', 'rerack'); //Database name
+define('DB_HOST', ''); //Should probably be localhost
 define('DB_USERNAME', 'root'); //Username
 define('DB_PASSWORD', ''); //Password
-define('DB_NAME', 'rerack'); //Database name
-define('DB_HOST', '127.0.0.1'); //Database Server
 
 define('TAV','2010-04-01'); // twilio api version
 define('TSID', 'ACb421c4f6d7aa53a5f87cc9d11e51aaa0'); //sid
