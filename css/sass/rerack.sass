@@ -7,11 +7,11 @@ body, a, p, div, li, h1, h2, h3, h4, td, input, span, textarea
   color: #CCC
   
 body
-  background: #44392e url(/images/wood-bg.jpg) top center no-repeat
-  height: 100%
+  background: #44392e url(/images/wood-bg.jpg) center
 
 html, body
   background-color: #44392e
+  height: 100%
   
 a
   text-decoration: none
@@ -53,10 +53,13 @@ input:focus
   outline: none
   border: none
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -webkit-appearance: none
 
-input.clean, textarea.clean
+input.clean, textarea.clean, input.clean:focus, textarea.clean:focus
   background-color: transparent
   border: none
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -webkit-appearance: none
 
 #fade-wrap
   display: none
@@ -93,7 +96,24 @@ td
 #top-logo
   position: relative
   top: 5px
-  left: 90px
+  left: 60px
+
+#code
+  text-align: center
+  a
+    font-size: 22px
+
+#credits
+  text-align: center
+  a
+    font-size: 18px
+    color: #775134
+  
+#signup
+  position: relative
+  width: 530px
+  margin-top: 10px
+  left: 45px
 
 #login
   position: relative
@@ -292,12 +312,12 @@ td
   padding: 0 10px
   input[type=text]
     text-align: center
-    height: 45px
+    height: 50px
     font-size: 32px
     color: #698488
     width: 530px
-    padding: 10px 0 0 0 
-    margin-bottom: 20px
+    padding: 10px 0 2px 0 
+    margin-bottom: 18px
   #rules
     padding-top: 20px
     font-size: 18px

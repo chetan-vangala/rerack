@@ -6,7 +6,7 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body>
+<body onload="JavaScript:timedRefresh(50000);">
 
   <?php require('shared/_header.php');?>
   <div id="content-area">

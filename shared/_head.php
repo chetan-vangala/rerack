@@ -4,6 +4,10 @@
 <!-- chris butler did this - platformthirteen.com -->
   <head>
     <title>rerackapp.com</title>
+    <meta property="og:title" content="Rerack Beta" />
+    <meta property="og:url" content="http://rerackapp.com/" />
+    <meta property="og:description" content="Rerack is a beer-pong list that runs itself. Players can sign up, check the list, and be notified when they're up. Oh, and you can do it via SMS, too. Sign up for a beta account to start hosting tables." />
+    <meta property="og:image" content="http://rerackapp.com/images/thumbnail.jpg" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=640; height=device-height; initial-scale=0.5; maximum-scale=1.0; user-scalable=no; target-densitydpi=320;">
     <meta name="HandheldFriendly" content="true" />
@@ -28,20 +32,20 @@
         if(!empty($house)){
           $house = $house[0];
           $the_id = $house->id;
+          if(isset($_SESSION['t'])){
+          $team_code = decrypt($_SESSION['t'], KEY);
+          $the_team  = $t->find(array('id'=> $team_code));
+          if(!empty($the_team)){
+            $the_team = $the_team[0];
+          } else {
+            $the_team = null;
+          }
+        } else {
+          $team_code = '';
+        }
         } else {
           redirect_to('index.php');
         }
-      }
-      if(isset($_SESSION['t'])){
-        $team_code = decrypt($_SESSION['t'], KEY);
-        $the_team  = $t->find(array('id'=> $team_code));
-        if(!empty($the_team)){
-          $the_team = $the_team[0];
-        } else {
-          $the_team = null;
-        }
-      } else {
-        $team_code = '';
       }
     ?>
     
