@@ -1,5 +1,15 @@
 <template name="Landing">
-  <div class="wrapper gradient">
-    <img src="/rerack-logo.png">
+  <div class="container">
+    <div class="row">
+      <div class="landing-container col-sm-12 col-md-6 col-md-offset-3">
+        <img class="img-responsive" src="/rerack-logo.png">
+        <h2>Want to play? Get on the list!</h2>
+        <p>ReRack is currently in private beta. Give us your email address and we'll send you an invite.</p>
+        <form id="invite-form">
+          <input type="email" id="email-input" placeholder="Enter Your Email" required>
+          <input type="submit" id="email-submit" class="btn-block" value="I'm Interested">
+        </form>
+      </div>
+    </div>
   </div>
 </template>

@@ -2,12 +2,17 @@
 /* Landing: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
 Template.Landing.events({
-  /*
-   * Example:
-   *  'click .selector': function (e, tmpl) {
-   *
-   *  }
-   */
+  'click #email-submit': function (e, tmpl) {
+    var email = tmpl.find('#email-input').value;
+    var valid = tmpl.find('#invite-form').checkValidity();
+    if (email != '' && valid) {
+      e.preventDefault();
+      Meteor.call('addInvite', email, function(error, result) {
+        console.log(error, result);
+      });
+    }
+  }
+   
 });
 
 Template.Landing.helpers({

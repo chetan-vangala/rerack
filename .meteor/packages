@@ -9,4 +9,7 @@ insecure
 iron:router
 fourseven:scss
 mizzao:bootstrap-3
+email
+launch-screen
+cmather:handlebars-server
 
