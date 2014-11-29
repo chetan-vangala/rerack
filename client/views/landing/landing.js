@@ -23,12 +23,6 @@ Template.Landing.events({
 });
 
 Template.Landing.helpers({
-  /*
-   * Example:
-   *  items: function () {
-   *    return Items.find();
-   *  }
-   */
 });
 
 /*****************************************************************************/
