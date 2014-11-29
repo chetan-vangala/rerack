@@ -3,12 +3,12 @@ Meteor.methods({
     check([email], [String]);
     this.unblock();
     
-    var body = Handlebars.templates['invite']({email: email});
+    var body = Handlebars.templates['confirm']({email: email});
 
     Email.send({
       to: email,
-      from: 'ReRack <list@rerackapp.com>',
-      subject: 'Thanks for your interest in ReRack',
+      from: 'rerack <list@rerackapp.com>',
+      subject: 'Confirm Your Email Address',
       html: body
     });
   }

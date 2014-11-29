@@ -9,6 +9,13 @@ Template.Landing.events({
       e.preventDefault();
       Meteor.call('addInvite', email, function(error, result) {
         console.log(error, result);
+        if (!error) {
+          if (result) {
+            $('#invite-form').slideUp();
+          } else {
+
+          }
+        }
       });
     }
   }

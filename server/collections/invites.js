@@ -9,10 +9,12 @@ Invites.submitEmail = function(email) {
   email = email.toLowerCase();
 
   if (!Invites.findOne({email: email})) {
-    console.log('email', email);
-    Meteor.call('sendEmail', email)
-    return email;
+    Invites.insert({email: email, timestamp: Date.now(), active: false});
+    Meteor.call('sendEmail', email);
+    return true;
   }
+
+  return false;
 }
 
 Invites.allow({
