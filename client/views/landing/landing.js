@@ -8,7 +8,6 @@ Template.Landing.events({
     if (email != '' && valid) {
       e.preventDefault();
       Meteor.call('addInvite', email, function(error, result) {
-        console.log(error, result);
         if (!error) {
           if (result) {
             $('#invite-form').slideUp();
@@ -18,8 +17,22 @@ Template.Landing.events({
         }
       });
     }
+  },
+  'keyup #email-input': function(e, tmpl) {
+    var email = tmpl.find('#email-input').value;
+    var valid = tmpl.find('#invite-form').checkValidity();
+    if (valid) {
+      Meteor.call('checkInviteEmail', email, function(error, result) {
+        if (!error && result) {
+          $('#invite-form').removeClass('valid');
+          $('h4.in-use').show();
+        } else {
+          $('#invite-form').addClass('valid');
+          $('h4.in-use').hide();
+        }
+      });
+    }
   }
-   
 });
 
 Template.Landing.helpers({

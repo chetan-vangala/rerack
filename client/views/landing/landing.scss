@@ -3,8 +3,11 @@
 /*****************************************************************************/
 
 $red: #8d1822;
+$green: #188d43;
 $gray: #ACACAC;
 $black: #0b0f12;
+
+$error: #ec4755;
 
 .landing-container {
   margin-top: 15%;
@@ -13,6 +16,10 @@ $black: #0b0f12;
   }
   p {
     color: $gray;
+  }
+  h6 {
+    margin: 45px 0 15px;
+    text-align: center;
   }
 }
 
@@ -28,6 +35,10 @@ $black: #0b0f12;
   &:focus {
     background: $red;
     color: white;
+    & + #email-submit {
+      background: $black;
+      color: $red; 
+    }
   }
 }
 
@@ -53,8 +64,30 @@ $black: #0b0f12;
   text-transform: uppercase;
   outline: 0;
   text-align: right;
+
   &:hover {
     background: $black;
     color: $red;
+  }
+}
+
+#invite-form {
+  input {
+    -webkit-transition: background-color 500ms linear, color 500ms linear, border-color 500ms linear;
+    -moz-transition: background-color 500ms linear, color 500ms linear, border-color 500ms linear;
+    -o-transition: background-color 500ms linear, color 500ms linear, border-color 500ms linear;
+    -ms-transition: background-color 500ms linear, color 500ms linear, border-color 500ms linear;
+    transition: background-color 500ms linear, color 500ms linear, border-color 500ms linear;
+  }
+  &.valid {
+    input {
+      background: $green !important;
+      color: white !important;
+      border-color: $green !important;
+    }
+  }
+  h4.in-use {
+    display: none;
+    color: $error;
   }
 }
