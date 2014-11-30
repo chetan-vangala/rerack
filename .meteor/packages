@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 iron:router
 fourseven:scss
@@ -13,4 +12,3 @@ email
 launch-screen
 cmather:handlebars-server
 mdg:geolocation
-

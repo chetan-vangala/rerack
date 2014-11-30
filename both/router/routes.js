@@ -8,3 +8,4 @@ Router.configure({
 });
 
 Router.route('/', {name: 'landing'});
+Router.route('/find', {name: 'find'});
