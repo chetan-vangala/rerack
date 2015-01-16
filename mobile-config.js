@@ -12,8 +12,7 @@ App.icons({
   'android_xhdpi': 'icons/xhdpi.png'
 });
 
-// App.launchScreens({
-//   'iphone': 'splash/Default~iphone.png',
-//   'iphone_2x': 'splash/Default@2x~iphone.png',
-//   // ... more screen sizes and platforms ...
-// });
+App.launchScreens({
+  'android_xhdpi_portrait': 'screens/xhdpi-p.png',
+  'android_xhdpi_landscape': 'screens/xhdpi-l.png'
+});

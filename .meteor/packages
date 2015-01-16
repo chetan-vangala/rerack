@@ -12,3 +12,6 @@ email
 launch-screen
 cmather:handlebars-server
 mdg:geolocation
+accounts-base
+accounts-password
+

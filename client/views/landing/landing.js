@@ -18,7 +18,7 @@ Template.Landing.events({
       });
     }
   },
-  'keyup #email-input': function(e, tmpl) {
+  'change #email-input, keyup #email-input': function(e, tmpl) {
     var email = tmpl.find('#email-input').value;
     var valid = tmpl.find('#invite-form').checkValidity();
     if (valid) {
