@@ -9,8 +9,8 @@ html, body {
   margin: 0;
 }
 
-body {
-  background: $black url('/wood/Melamine-wood-006.png') repeat;
+body, .wood-bg {
+  background: $black url('//cdn.rerackapp.com/images/wood/Melamine-wood-006.png') repeat;
 }
 
 .wrapper {
@@ -41,6 +41,3 @@ h6 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d3033', endColorstr='#000000',GradientType=1 );
 }
 
-.wood-bg {
-  background: $black url('/wood/Melamine-wood-006.png') repeat;
-}

@@ -6,7 +6,6 @@
 meteor-platform
 insecure
 iron:router
-fourseven:scss
 mizzao:bootstrap-3
 email
 launch-screen
@@ -15,3 +14,5 @@ mdg:geolocation
 accounts-base
 accounts-password
 
+alanning:roles
+fourseven:scss@=1.0.0
