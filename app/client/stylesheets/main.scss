@@ -1,0 +1,43 @@
+/*****************************************************************************/
+/* main: Style */
+/*****************************************************************************/
+$black: #0b0f12;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body, .wood-bg {
+  background: $black url('//cdn.rerackapp.com/images/wood/Melamine-wood-006.png') repeat;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  div {
+    height: 100%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+h6 {
+  font-weight: 300;
+  color: #999999;
+}
+
+.gradient-bg {
+  background: #2d3033;
+  background: -moz-radial-gradient(center, ellipse cover, #2d3033 0%, #000000 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#2d3033), color-stop(100%,#000000));
+  background: -webkit-radial-gradient(center, ellipse cover, #2d3033 0%,#000000 100%);
+  background: -o-radial-gradient(center, ellipse cover, #2d3033 0%,#000000 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #2d3033 0%,#000000 100%);
+  background: radial-gradient(ellipse at center, #2d3033 0%,#000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d3033', endColorstr='#000000',GradientType=1 );
+}
+
+@import "client/templates/landing/landing.scss";
