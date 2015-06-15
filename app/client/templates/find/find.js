@@ -1,7 +1,7 @@
 /*****************************************************************************/
-/* MasterLayout: Event Handlers and Helpersss .js*/
+/* Find: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.MasterLayout.events({
+Template.Find.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -10,23 +10,22 @@ Template.MasterLayout.events({
    */
 });
 
-Template.MasterLayout.helpers({
-  /*
-   * Example:
-   *  items: function () {
-   *    return Items.find();
-   *  }
-   */
+Template.Find.helpers({
+  location: function () {
+    var loc = Geolocation.latLng();
+    console.log(loc);
+    return loc;
+  }
 });
 
 /*****************************************************************************/
-/* MasterLayout: Lifecycle Hooks */
+/* Find: Lifecycle Hooks */
 /*****************************************************************************/
-Template.MasterLayout.created = function () {
+Template.Find.created = function () {
 };
 
-Template.MasterLayout.rendered = function () {
+Template.Find.rendered = function () {
 };
 
-Template.MasterLayout.destroyed = function () {
+Template.Find.destroyed = function () {
 };

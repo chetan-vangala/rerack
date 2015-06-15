@@ -1,0 +1,21 @@
+<template name="Landing">
+  <div class="container">
+    <div class="row">
+      <div class="landing-container col-sm-12 col-md-6 col-md-offset-3">
+        <img class="img-responsive" src="//cdn.rerackapp.com/images/rerack-logo.png">
+        <h2>Want to play? Get on the list!</h2>
+        <p>ReRack is currently in private beta. Give us your email address and we'll send you an invite.</p>
+        <form id="invite-form">
+          <h4 class="in-use">Email address in use. Please try again.</h4>
+          <input type="email" id="email-input" placeholder="Enter Your Email" required>
+          <input type="submit" id="email-submit" class="btn-block" value="I'm Interested">
+        </form>
+        <h6>
+          <a href="{{pathFor 'find'}}">
+            I've already recieved an invite code
+          </a>
+        </h6>
+      </div>
+    </div>
+  </div>
+</template>

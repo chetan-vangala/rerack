@@ -1,7 +1,7 @@
 /*****************************************************************************/
-/* MasterLayout: Event Handlers and Helpersss .js*/
+/* NotFound: Event Handlers and Helpersss .js*/
 /*****************************************************************************/
-Template.MasterLayout.events({
+Template.NotFound.events({
   /*
    * Example:
    *  'click .selector': function (e, tmpl) {
@@ -10,7 +10,7 @@ Template.MasterLayout.events({
    */
 });
 
-Template.MasterLayout.helpers({
+Template.NotFound.helpers({
   /*
    * Example:
    *  items: function () {
@@ -20,13 +20,13 @@ Template.MasterLayout.helpers({
 });
 
 /*****************************************************************************/
-/* MasterLayout: Lifecycle Hooks */
+/* NotFound: Lifecycle Hooks */
 /*****************************************************************************/
-Template.MasterLayout.created = function () {
+Template.NotFound.created = function () {
 };
 
-Template.MasterLayout.rendered = function () {
+Template.NotFound.rendered = function () {
 };
 
-Template.MasterLayout.destroyed = function () {
+Template.NotFound.destroyed = function () {
 };

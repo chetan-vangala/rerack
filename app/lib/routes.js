@@ -5,8 +5,9 @@ Router.configure({
 });
 
 Router.route('/', {
-  name: 'home',
-  controller: 'HomeController',
-  action: 'action',
+  name: 'landing',
   where: 'client'
 });
+
+Router.route('/find', {name: 'find'});
+Router.route('/cast', {name: 'cast'});
