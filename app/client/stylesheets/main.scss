@@ -41,3 +41,9 @@ h6 {
 }
 
 @import "client/templates/landing/landing.scss";
+
+@import "client/templates/layouts/master_layout/master_layout.scss";
+@import "client/templates/shared/loading/loading.scss";
+@import "client/templates/shared/not_found/not_found.scss";
+@import "client/templates/cast/cast.scss";
+@import "client/templates/find/find.scss";
