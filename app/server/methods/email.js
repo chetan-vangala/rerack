@@ -2,7 +2,9 @@ Meteor.methods({
   sendEmail: function (email) {
     check([email], [String]);
     this.unblock();
-    
+
+    console.log('sendEmail', email);
+
     var body = Handlebars.templates['confirm']({email: email});
 
     Email.send({
