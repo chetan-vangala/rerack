@@ -11,9 +11,9 @@
   "appName": "rerackit",
   "app": "app",
   "env": {
-    "ROOT_URL": "https://rerack.it"
-    //"DDP_DEFAULT_CONNECTION_URL": "https://ddp.rerackapp.com",
-    //"MAIL_URL": "smtp://postmaster%40list.rerackapp.com:bb4837a55b36b09e213d72609d5699ea@smtp.mailgun.org:587/"
+    "ROOT_URL": "https://rerack.it",
+    "DDP_DEFAULT_CONNECTION_URL": "https://ddp.rerack.it",
+    "MAIL_URL": "smtp://list%40rerack.it:R3rack1t@smtp.mailgun.org:587/"
   },
   "deployCheckWaitTime": 15,
   "uploadProgressBar": true
