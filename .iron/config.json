@@ -17,6 +17,6 @@
   },
 
   "mup": {
-    "production": "/config/production"
+    "version": "mupx"
   }
 }

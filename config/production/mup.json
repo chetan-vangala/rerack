@@ -11,10 +11,10 @@
   "appName": "rerackit",
   "app": "/Users/CButler/Sites/rerackit/app",
   "env": {
-    "ROOT_URL": "https://rerack.it",
+    "ROOT_URL": "https://app.rerack.it",
     "DDP_DEFAULT_CONNECTION_URL": "https://ddp.rerack.it",
     "MAIL_URL": "smtp://list%40rerack.it:R3rack1t@smtp.mailgun.org:587/"
   },
   "deployCheckWaitTime": 15,
-  "uploadProgressBar": true
+  "enableUploadProgressBar": false
 }
