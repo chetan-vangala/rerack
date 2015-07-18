@@ -14,5 +14,9 @@
   "route": {
     "controller": true,
     "template": true
+  },
+
+  "mup": {
+    "production": "/config/production"
   }
 }
