@@ -5,6 +5,6 @@ Router.configure({
 });
 
 Router.route('/', {
-  name: 'home',
+  name: 'splash',
   where: 'client'
 });
