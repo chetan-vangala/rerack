@@ -3,13 +3,13 @@
     {
       "host": "54.84.184.62",
       "username": "ubuntu",
-      "pem": "bin/rerackit.pem",
+      "pem": "/Users/CButler/Sites/rerackit/bin/rerackit.pem",
       "env": {}
     }
   ],
   "setupMongo": true,
   "appName": "rerackit",
-  "app": "app",
+  "app": "/Users/CButler/Sites/rerackit/app",
   "env": {
     "ROOT_URL": "https://rerack.it",
     "DDP_DEFAULT_CONNECTION_URL": "https://ddp.rerack.it",
