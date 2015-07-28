@@ -1,20 +1,3 @@
-Schema.location = new SimpleSchema({
-  creationDate: timestamp,
-  name: {
-    type: String,
-    optional: true
-  },
-  address: {
-    type: Schema.address
-  },
-  coordinates: {
-    type: Object
-  },
-  creatorId: {
-    type: String
-  }
-});
-
 Schema.address = new SimpleSchema({
   street: {
     type: String,
@@ -31,5 +14,31 @@ Schema.address = new SimpleSchema({
   zip: {
     type: String,
     regEx: /^[0-9]{5}$/
+  }
+});
+
+Schema.coordinates = new SimpleSchema({
+  longitude: {
+    type: Number
+  },
+  latitude: {
+    type: Number
+  },
+});
+
+Schema.location = new SimpleSchema({
+  creationDate: timestamp,
+  name: {
+    type: String,
+    optional: true
+  },
+  address: {
+    type: Schema.address
+  },
+  coordinates: {
+    type: Schema.coordinates
+  },
+  creatorId: {
+    type: String
   }
 });
