@@ -13,11 +13,12 @@ insecure
 iron:router
 fourseven:scss
 
-aldeed:simple-schema
+rerack:schemas
+
 aldeed:collection2
 
 dburles:collection-helpers
-alanning:role
+alanning:roles
 
 twbs:bootstrap
 fortawesome:fontawesome
