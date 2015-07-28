@@ -5,8 +5,19 @@
 # but you can also edit it by hand.
 
 meteor-platform
+accounts-base
+accounts-password
+
 insecure
 
-fourseven:scss
 iron:router
+fourseven:scss
+
 aldeed:simple-schema
+aldeed:collection2
+
+dburles:collection-helpers
+alanning:role
+
+twbs:bootstrap
+fortawesome:fontawesome
