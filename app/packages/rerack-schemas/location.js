@@ -1,4 +1,5 @@
 Schema.location = new SimpleSchema({
+  creationDate: timestamp,
   name: {
     type: String,
     optional: true
@@ -8,6 +9,9 @@ Schema.location = new SimpleSchema({
   },
   coordinates: {
     type: Object
+  },
+  creatorId: {
+    type: String
   }
 });
 
