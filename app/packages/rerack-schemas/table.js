@@ -1,4 +1,5 @@
 Schema.table = new SimpleSchema({
+  creationDate: timestamp,
   title: {
     type: String,
     label: "Name",
@@ -11,14 +12,6 @@ Schema.table = new SimpleSchema({
   visibility: {
     type: String,
     allowedValues: ['public', 'unlisted', 'private']
-  },
-  creationDate: {
-    type: Date,
-    autoValue: function() {
-      if (this.isInsert) {
-        return new Date();
-      }
-    }
   },
   location: {
     type: Schema.location
